@@ -1,0 +1,7 @@
+@font-face {
+  font-family: UbuntuMono;
+  src: url("./assets/UbuntuMono.ttf");
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

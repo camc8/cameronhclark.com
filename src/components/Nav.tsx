@@ -1,0 +1,53 @@
+import { useState } from "react";
+import Hamburger from "../components/Hamburger";
+import { motion, AnimatePresence } from "framer-motion";
+
+export default function Nav() {
+  const [navOpen, setNavOpen] = useState<boolean>(false);
+
+  const body = `
+    body {
+        overflow: hidden;
+    }
+`;
+  return (
+    <nav className="w-screen drop-shadow-sm px-8 md:px-28 z-20">
+      {navOpen && <style>{body}</style>}
+      <div className="flex flex-wrap items-center justify-between mx-auto h-[7rem] lg:mt-10">
+        <div className="font-semibold text-slate-50 h-full">
+          <a href="/">
+            <img src="" alt="" className="h-full py-4 lg:py-0 lg:pb-8" />
+          </a>
+        </div>
+        <div onClick={() => setNavOpen(!navOpen)} className="z-50">
+          <Hamburger open={navOpen}></Hamburger>
+        </div>
+        <AnimatePresence>
+          {navOpen && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed top-0 right-0 h-screen w-screen grid px-8 md:px-28 py-[7rem] backdrop-blur-lg font-thin text-center text-4xl">
+              <a href="#" className="text-slate-800 active:text-slate-700">
+                ./
+              </a>
+              <a href="#" className="text-slate-800 active:text-slate-700">
+                ./portfolio
+              </a>
+              <a href="#" className="text-slate-800 active:text-slate-700">
+                ./about-me
+              </a>
+              <a href="#" className="text-slate-800 active:text-slate-700">
+                ./contact
+              </a>
+              <a href="#" className="text-slate-800 active:text-slate-700">
+                ./socials
+              </a>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </nav>
+  );
+}
