@@ -1,12 +1,12 @@
 import Nav from "./components/Nav";
 import {
   FaReact,
-  FaVuejs,
   FaCss3Alt,
   FaHtml5,
   FaNodeJs,
   FaGithub,
   FaFigma,
+  FaNpm,
 } from "react-icons/fa";
 import {
   BiLogoTailwindCss,
@@ -18,33 +18,43 @@ import {
   BiLogoLinkedinSquare,
 } from "react-icons/bi";
 import { SiVite, SiAdobephotoshop } from "react-icons/si";
+import { TbBrandMysql } from "react-icons/tb";
 import { FiArrowRight } from "react-icons/fi";
-
+import { MdEmail } from "react-icons/md";
+import { useState } from "react";
+import { motion } from "framer-motion";
 function App() {
+  const [aboutOpen, setAboutOpen] = useState(false);
   return (
     <>
       <div className="">
         <Nav></Nav>
-        <section className="px-8 md:px-28 py-10 grid grid-cols-4 gap-8">
+        <section className="grid grid-cols-4 px-8 md:px-28 py-10 gap-8">
           <div className="col-span-4 mb-24 space-y-3">
-            <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-violet-400 to-red-500 w-fit">
+            <h1 className="text-7xl font-bold text-transparent bg-clip-text animate-gradient w-fit">
               Cameron
               <br />
               Clark
             </h1>
-            <p className="font-mono text-xl text-slate-800">
-              full stack software engineer / web developer
+            <p className="font-mon font-light text-xl text-slate-600">
+              Full stack software engineer + web developer
             </p>
             <div className="gap-3 flex">
-              <a href="/" className="p-3 border rounded-full text-xl">
+              <a
+                href="https://github.com/camc8"
+                target="_blank"
+                className="p-3 border rounded-full text-xl hover:bg-slate-100">
                 <FaGithub />
               </a>
-              <a href="/" className="p-3 border rounded-full text-xl">
+              <a
+                href="https://www.linkedin.com/in/cameron-clark-6b13281b2"
+                target="_blank"
+                className="p-3 border rounded-full text-xl hover:bg-slate-100">
                 <BiLogoLinkedinSquare />
               </a>
             </div>
           </div>
-          <div className="group col-span-4 lg:col-span-2 row-span-3 rounded-3xl shadow-lg shadow-slate-100 bg-gradient-to-br from-teal-100 to-violet-100 p-8 text-slate-700">
+          <div className="h-fit group col-span-4 lg:col-span-2 row-span-3 rounded-3xl shadow-lg shadow-slate-100 bg-gradient-to-br from-teal-100 to-violet-100 p-8 text-slate-700">
             <div className="group-hover:scale-[1.02] duration-200 ease-linear">
               <div className="grid  grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
@@ -57,7 +67,7 @@ function App() {
                     </li>
                     <li>
                       <FaCss3Alt className="text-blue-500 text-2xl" />
-                      &nbsp;CSS / SASS / LESS
+                      &nbsp;CSS
                     </li>
                     <li>
                       <BiLogoJavascript className="text-yellow-500 text-2xl" />
@@ -68,16 +78,12 @@ function App() {
                       &nbsp;React
                     </li>
                     <li>
-                      <FaVuejs className="text-green-400 text-2xl" />
-                      &nbsp;Vue
-                    </li>
-                    <li>
                       <BiLogoTailwindCss className="text-sky-400 text-2xl" />
                       &nbsp;Tailwind
                     </li>
                     <li>
                       <BiLogoJquery className="text-orange-600 text-2xl" />
-                      &nbsp;JQuery
+                      &nbsp;Jquery
                     </li>
                   </ul>
                 </div>
@@ -86,16 +92,20 @@ function App() {
 
                   <ul className="mt-2 grid gap-2 [&>li]:inline-flex [&>li]:items-center font-mono">
                     <li>
-                      <FaNodeJs className="text-blue-500 text-2xl" />
-                      &nbsp;Node / Deno
+                      <BiLogoPhp className="text-cyan-700 text-2xl" />
+                      &nbsp;PHP / Laravel / Blade
                     </li>
                     <li>
-                      <BiLogoPhp className="text-purple-500 text-2xl" />
-                      &nbsp;PHP / Laravel / Blade
+                      <FaNodeJs className="text-lime-500 text-2xl" />
+                      &nbsp;Node
                     </li>
                     <li>
                       <BiLogoPython className="text-sky-700 text-2xl" />
                       &nbsp;Python
+                    </li>
+                    <li>
+                      <TbBrandMysql className="text-sky-800 text-2xl" />
+                      &nbsp;Mysql / MariaDB / Sqlite
                     </li>
                   </ul>
                 </div>
@@ -113,6 +123,10 @@ function App() {
                     <li>
                       <SiVite className="text-green-500 text-2xl" />
                       &nbsp;Vite
+                    </li>
+                    <li>
+                      <FaNpm className="text-red-500 text-2xl" />
+                      &nbsp;NPM
                     </li>
                   </ul>
                 </div>
@@ -132,8 +146,14 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="h-fit col-span-4 md:col-span-2 rounded-3xl shadow-lg shadow-slate-100 bg-rose-50 p-8 group">
-            <a href="/">
+          <motion.div
+            layout="position"
+            className="cursor-pointer h-fit col-span-4 md:col-span-2 rounded-3xl shadow-lg shadow-slate-100 bg-rose-50 p-8 group [&[data-isOpen='true']]:fixed [&[data-isOpen='true']]:inset-0 [&[data-isOpen='true']]:rounded-none [&[data-isOpen='true']]:h-full"
+            data-isOpen={aboutOpen}>
+            {aboutOpen && <style>{`body {overflow: hidden;}`}</style>}
+            <a
+            // onClick={() => setAboutOpen(!aboutOpen)}
+            >
               <div className="grid gap-2 group-hover:scale-[1.02] duration-200 ease-linear">
                 <h2 className="text-slate-800 text-xl">About me</h2>
                 <p className="text-slate-700">
@@ -143,12 +163,12 @@ function App() {
                   and backend/database technology, I can turn pretty much any
                   idea into a reality.
                 </p>
-                <span className="flex items-center gap-1 text-slate-700">
+                {/* <span className="flex items-center gap-1 text-slate-700">
                   Read more <FiArrowRight className="mt-[1px]" />
-                </span>
+                </span> */}
               </div>
             </a>
-          </div>
+          </motion.div>
           <div className="h-fit col-span-4 md:col-span-2 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-teal-50 p-8 group">
             <div className="group-hover:scale-[1.02] duration-200 ease-linear">
               <h2 className="text-slate-800 text-xl mb-2">Projects</h2>
@@ -158,6 +178,28 @@ function App() {
                   alt=""
                   className="rounded-3xl"
                 />
+              </div>
+            </div>
+          </div>
+          <div className="h-fit col-span-4 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-sky-50 p-8 group">
+            <div className="group-hover:scale-[1.02] duration-200 ease-linear">
+              <h2 className="text-slate-800 text-xl mb-2">Contact</h2>
+              <div className="text-slate-700 space-y-3">
+                <div className="flex items-center justify-center">
+                  <BiLogoLinkedinSquare className="text-2xl" />
+                  <a
+                    className="mx-1"
+                    target="_blank"
+                    href="https://www.linkedin.com/in/cameron-clark-6b13281b2">
+                    Cameron Clark
+                  </a>
+                </div>
+                <div className="flex items-center justify-center">
+                  <MdEmail className="text-2xl" />
+                  <a className="mx-1" href="mailto:cameron@xcorpllc.com">
+                    cameron@xcorpllc.com
+                  </a>
+                </div>
               </div>
             </div>
           </div>
