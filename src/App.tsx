@@ -7,7 +7,10 @@ import {
   FaGithub,
   FaFigma,
   FaNpm,
+  FaBuilding,
+  FaDiscord,
 } from "react-icons/fa";
+import { FaFilm } from "react-icons/fa6";
 import {
   BiLogoTailwindCss,
   BiLogoJavascript,
@@ -17,21 +20,21 @@ import {
   BiLogoGit,
   BiLogoLinkedinSquare,
 } from "react-icons/bi";
-import { SiVite, SiAdobephotoshop } from "react-icons/si";
+import { SiVite, SiAdobephotoshop, SiRetroarch } from "react-icons/si";
 import { TbBrandMysql } from "react-icons/tb";
-import { FiArrowRight } from "react-icons/fi";
-import { MdEmail } from "react-icons/md";
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { RiQuillPenFill } from "react-icons/ri";
+// import { FiArrowRight } from "react-icons/fi";
 function App() {
-  const [aboutOpen, setAboutOpen] = useState(false);
   return (
     <>
       <div className="">
         <Nav></Nav>
-        <section className="grid grid-cols-4 px-8 md:px-28 py-10 gap-8">
+        {/* <div class="flex mt-20 gap-2 [&_img]:w-[100%] [&_img]:rounded-lg">
+                <div class="col w-[50%] md:w-[33%] lg:w-[25%] space-y-2"></div> */}
+        <section className="grid grid-cols-4 grid-rows-1 px-8 md:px-28 py-10 gap-8">
+          {/* Hero */}
           <div className="col-span-4 mb-24 space-y-3">
-            <h1 className="text-7xl font-bold text-transparent bg-clip-text animate-gradient w-fit">
+            <h1 className="text-7xl font-bold text-transparent bg-clip-text animate-my-name w-fit">
               Cameron
               <br />
               Clark
@@ -43,24 +46,26 @@ function App() {
               <a
                 href="https://github.com/camc8"
                 target="_blank"
-                className="p-3 border rounded-full text-xl hover:bg-slate-100">
+                className="p-3 border rounded-full text-xl hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200">
                 <FaGithub />
               </a>
               <a
                 href="https://www.linkedin.com/in/cameron-clark-6b13281b2"
                 target="_blank"
-                className="p-3 border rounded-full text-xl hover:bg-slate-100">
+                className="p-3 border rounded-full text-xl hover:bg-sky-600 hover:border-sky-600 hover:text-white duration-200">
                 <BiLogoLinkedinSquare />
               </a>
             </div>
           </div>
-          <div className="h-fit group col-span-4 lg:col-span-2 row-span-3 rounded-3xl shadow-lg shadow-slate-100 bg-gradient-to-br from-teal-100 to-violet-100 p-8 text-slate-700">
+
+          {/* Skills */}
+          <div className="group col-span-4 lg:col-span-2 row-span-2 rounded-3xl shadow-lg shadow-slate-100 animate-skills p-8 text-slate-700">
             <div className="group-hover:scale-[1.02] duration-200 ease-linear">
-              <div className="grid  grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid  grid-cols-1 sm:grid-cols-2 gap-8">
                 <div>
                   <h2 className="text-slate-800 text-lg mb-2">Front end</h2>
 
-                  <ul className="mt-2 grid gap-2 [&>li]:inline-flex [&>li]:items-center font-mono">
+                  <ul className="mt-2 grid gap-2 [&>li]:inline-flex [&>li]:items-center">
                     <li>
                       <FaHtml5 className="text-orange-600 text-2xl" />
                       &nbsp;HTML
@@ -90,7 +95,7 @@ function App() {
                 <div>
                   <h2 className="text-slate-800 text-lg mb-2">Back end</h2>
 
-                  <ul className="mt-2 grid gap-2 [&>li]:inline-flex [&>li]:items-center font-mono">
+                  <ul className="mt-2 grid gap-2 [&>li]:inline-flex [&>li]:items-center">
                     <li>
                       <BiLogoPhp className="text-cyan-700 text-2xl" />
                       &nbsp;PHP / Laravel / Blade
@@ -111,7 +116,7 @@ function App() {
                 </div>
                 <div>
                   <h2 className="text-slate-800 text-lg mb-2">Dev</h2>
-                  <ul className="mt-2 grid gap-2 [&>li]:inline-flex [&>li]:items-center font-mono">
+                  <ul className="mt-2 grid gap-2 [&>li]:inline-flex [&>li]:items-center">
                     <li>
                       <BiLogoGit className="text-slate-700 text-2xl" />
                       &nbsp;Git
@@ -132,7 +137,7 @@ function App() {
                 </div>
                 <div>
                   <h2 className="text-slate-800 text-lg mb-2">Design</h2>
-                  <ul className="mt-2 grid gap-2 [&>li]:inline-flex [&>li]:items-center font-mono">
+                  <ul className="mt-2 grid gap-2 [&>li]:inline-flex [&>li]:items-center">
                     <li>
                       <SiAdobephotoshop className="text-blue-800 text-2xl" />
                       &nbsp;Photoshop
@@ -146,58 +151,187 @@ function App() {
               </div>
             </div>
           </div>
-          <motion.div
-            layout="position"
-            className="cursor-pointer h-fit col-span-4 md:col-span-2 rounded-3xl shadow-lg shadow-slate-100 bg-rose-50 p-8 group [&[data-isOpen='true']]:fixed [&[data-isOpen='true']]:inset-0 [&[data-isOpen='true']]:rounded-none [&[data-isOpen='true']]:h-full"
-            data-isOpen={aboutOpen}>
-            {aboutOpen && <style>{`body {overflow: hidden;}`}</style>}
-            <a
-            // onClick={() => setAboutOpen(!aboutOpen)}
-            >
-              <div className="grid gap-2 group-hover:scale-[1.02] duration-200 ease-linear">
-                <h2 className="text-slate-800 text-xl">About me</h2>
-                <p className="text-slate-700">
-                  I grew up with an interest in engineering and software and it
-                  continues to be a passion of mine to this day. With over 5
-                  years of experience with web design, full stack development,
-                  and backend/database technology, I can turn pretty much any
-                  idea into a reality.
-                </p>
-                {/* <span className="flex items-center gap-1 text-slate-700">
+
+          {/* About me */}
+          <div className="cursor-pointer col-span-4 md:col-span-2 rounded-3xl shadow-lg shadow-slate-100 bg-rose-50 p-8 group">
+            <div className="grid gap-2 group-hover:scale-[1.02] duration-200 ease-linear">
+              <h2 className="text-slate-800 text-xl">About me</h2>
+              <p className="text-slate-700">
+                I grew up with an interest in engineering and software and it
+                continues to be a passion of mine to this day. With over 5 years
+                of experience with web design, full stack development, and
+                backend/database technology, I can turn pretty much any idea
+                into a reality.
+              </p>
+              {/* <span className="flex items-center gap-1 text-slate-700">
                   Read more <FiArrowRight className="mt-[1px]" />
                 </span> */}
-              </div>
-            </a>
-          </motion.div>
-          <div className="h-fit col-span-4 md:col-span-2 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-teal-50 p-8 group">
+            </div>
+          </div>
+
+          {/* Projects */}
+          <div className="col-span-4 md:col-span-2 rounded-3xl shadow-lg shadow-slate-100 bg-slate-100 p-8 group">
             <div className="group-hover:scale-[1.02] duration-200 ease-linear">
               <h2 className="text-slate-800 text-xl mb-2">Projects</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2">
-                <img
-                  src="https://images.unsplash.com/photo-1699183977963-242cb79d4bc2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHx8"
-                  alt=""
-                  className="rounded-3xl"
-                />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 my-6">
+                <div className="p-5 bg-pink-200 hover:bg-pink-300 duration-200 cursor-pointer text-pink-700 rounded-xl flex items-center gap-3 font-semibold">
+                  <RiQuillPenFill className="text-3xl" /> Form filler
+                </div>
+                <div className="p-5 bg-sky-200 hover:bg-sky-300 duration-200 cursor-pointer text-sky-700 rounded-xl flex items-center gap-3 font-semibold">
+                  <SiRetroarch className="text-4xl" /> Retro UI
+                </div>
+                <a
+                  href="https://pollination-pictures.com"
+                  target="_blank"
+                  className="p-5 bg-indigo-200 hover:bg-indigo-300 duration-200 cursor-pointer text-indigo-700 rounded-xl flex items-center gap-3 font-semibold">
+                  <FaFilm className="text-3xl" /> Pollination Pictures
+                </a>
+                <a
+                  href="https://xcorpllc.com"
+                  target="_blank"
+                  className="p-5 bg-blue-200 hover:bg-blue-300 duration-200 cursor-pointer text-blue-700 rounded-xl flex items-center gap-3 font-semibold">
+                  <FaBuilding className="text-3xl" /> XCORP LLC
+                </a>
+                <a
+                  href="https://github.com/camc8/Optibot"
+                  target="_blank"
+                  className="p-5 bg-purple-200 hover:bg-purple-300 duration-200 cursor-pointer text-purple-700 rounded-xl flex items-center gap-3 font-semibold">
+                  <FaDiscord className="text-3xl" /> Optibot
+                </a>
               </div>
             </div>
           </div>
-          <div className="h-fit col-span-4 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-sky-50 p-8 group">
+
+          {/* FormZen */}
+          <div className="col-span-4 md:col-span-2 rounded-3xl shadow-lg shadow-slate-100 bg-violet-500 pt-8 px-8 group overflow-hidden">
             <div className="group-hover:scale-[1.02] duration-200 ease-linear">
-              <h2 className="text-slate-800 text-xl mb-2">Contact</h2>
+              <div className="mb-8 grid gap-1">
+                <h2 className="text-slate-50 text-xl">FormZen</h2>
+                <p className="text-slate-100 font-light">
+                  Speeds up filling out and signing real estate forms using PDF
+                  Lib, Pelias geocoder, local government APIs, and React
+                </p>
+              </div>
+              <img
+                src="images/form-filler.png"
+                className="object-cover w-2/3 mx-auto rounded-t-2xl"
+                alt=""
+              />
+            </div>
+          </div>
+
+          {/* DOS */}
+          <div className="col-span-4 md:col-span-2 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-teal-600 pt-8 px-8 group overflow-hidden">
+            <div className="group-hover:scale-[1.02] duration-200 ease-linear grid content-between h-full">
+              <div className="mb-8 grid gap-1">
+                <h2 className="text-slate-50 text-xl">
+                  DOS Healthcare Reporting
+                </h2>
+                <p className="text-slate-100 font-light">
+                  Patient to nurse reporting system for assisted living and long
+                  term care facilities
+                </p>
+              </div>
+              <img
+                src="images/dos.png"
+                className="object-cover w-3/4 mx-auto rounded-t-2xl"
+                alt=""
+              />
+            </div>
+          </div>
+
+          {/* Retro UI */}
+          <a
+            href="https://github.com/camc8/RetroUI"
+            target="_blank"
+            className="col-span-4 md:col-span-2 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-slate-500 pt-8 px-8 group">
+            <div className="group-hover:scale-[1.02] duration-200 ease-linear grid items-start h-full">
+              <div className="grid gap-1">
+                <h2 className="text-slate-50 text-xl">Retro UI</h2>
+                <p className="text-slate-100 font-light">
+                  A 90's themed UI kit using Tailwind CSS
+                </p>
+              </div>
+              <img
+                src="images/retro-ui.png"
+                className="object-cover w-2/3 mx-auto my-12"
+                alt=""
+              />
+            </div>
+          </a>
+
+          {/* XCORP LLC */}
+          <a
+            href="https://xcorpllc.com"
+            target="_blank"
+            className="col-span-4 md:col-span-2 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-indigo-600 pt-8 px-8 group overflow-hidden">
+            <div className="group-hover:scale-[1.02] duration-200 ease-linear">
+              <div className="mb-8 grid gap-1">
+                <h2 className="text-slate-50 text-xl">XCORP LLC</h2>
+                <p className="text-slate-100 font-light">
+                  Corporate site for real estate management company
+                </p>
+              </div>
+              <img
+                src="images/xcorp.png"
+                className="object-cover w-3/4 mx-auto rounded-t-2xl"
+                alt=""
+              />
+            </div>
+          </a>
+
+          {/* Optibot */}
+          <a
+            href="https://github.com/camc8/optibot"
+            target="_blank"
+            className="col-span-4 md:col-span-2 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-blue-900 pt-8 px-8 group overflow-hidden">
+            <div className="group-hover:scale-[1.02] duration-200 ease-linear">
+              <div className="mb-8 grid gap-1">
+                <h2 className="text-slate-50 text-xl">Optibot</h2>
+                <p className="text-slate-100 font-light">
+                  Simple Python UI for automating messaging in Discord and other
+                  chat platforms
+                </p>
+              </div>
+              <img
+                src="images/optibot.png"
+                className="object-cover w-3/4 mx-auto rounded-t-2xl"
+                alt=""
+              />
+            </div>
+          </a>
+
+          {/* Contact */}
+          <div className="col-span-4 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-sky-100 p-12 group">
+            <div className="group-hover:scale-[1.02] duration-200 ease-linear">
+              <h2 className="text-slate-700 text-3xl font-semibold mb-2">
+                Let's make something great!
+              </h2>
               <div className="text-slate-700 space-y-3">
-                <div className="flex items-center justify-center">
-                  <BiLogoLinkedinSquare className="text-2xl" />
+                Send me an email at
+                <a
+                  className="mx-1 text-slate-900"
+                  href="mailto:cameron@xcorpllc.com">
+                  cameron@xcorpllc.com
+                </a>
+                <div className="gap-3 flex items-center pt-8">
                   <a
-                    className="mx-1"
+                    href="mailto:cameron@xcorpllc.com"
                     target="_blank"
-                    href="https://www.linkedin.com/in/cameron-clark-6b13281b2">
-                    Cameron Clark
+                    className="p-3 rounded-full bg-slate-700 text-slate-50 hover:bg-slate-900 hover:border-slate-900 duration-200">
+                    Contact me
                   </a>
-                </div>
-                <div className="flex items-center justify-center">
-                  <MdEmail className="text-2xl" />
-                  <a className="mx-1" href="mailto:cameron@xcorpllc.com">
-                    cameron@xcorpllc.com
+                  <a
+                    href="https://www.linkedin.com/in/cameron-clark-6b13281b2"
+                    target="_blank"
+                    className="p-3 rounded-full text-xl bg-slate-50 hover:bg-sky-600 hover:border-sky-600 hover:text-white duration-200">
+                    <BiLogoLinkedinSquare />
+                  </a>
+                  <a
+                    href="https://github.com/camc8"
+                    target="_blank"
+                    className="p-3 rounded-full text-xl bg-slate-50 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200">
+                    <FaGithub />
                   </a>
                 </div>
               </div>

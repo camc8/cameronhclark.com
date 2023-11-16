@@ -14,16 +14,18 @@ export default {
       },
     },
     fontFamily: {
+      'sans': ['"Poppins"', 'Arial', 'Helvetica', 'sans-serif'],
       'mono': ['"UbuntuMono"', 'Arial', 'Helvetica', 'sans-serif'],
     },
     extend: {
       animation: {
-        gradient: 'gradient 7s ease infinite alternate',
+        "my-name": 'my-name 7s ease infinite alternate',
+        skills: 'skills 7s ease infinite alternate',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       keyframes: {
-        gradient: {
+        "my-name": {
           '0%': {
             'background-position': '0% 50%',
             'background-size': '200% 200%',
@@ -38,6 +40,23 @@ export default {
             'background-position': '0% 50%',
             'background-size': '200% 200%',
             'background-image': 'linear-gradient(-45deg,#ee7752,#e73c7e,#23a6d5,#23d5ab)',
+          },
+        },
+        skills: {
+          '0%': {
+            'background-position': '0% 50%',
+            'background-size': '200% 200%',
+            'background-image': 'linear-gradient(135deg,#ccfbf1,#ede9fe,#ccfbf1)',
+          },
+          '50%': {
+            'background-position': '100% 50%',
+            'background-size': '200% 200%',
+            'background-image': 'linear-gradient(135deg,#ccfbf1,#ede9fe,#ccfbf1)',
+          },
+          '100%': {
+            'background-position': '0% 50%',
+            'background-size': '200% 200%',
+            'background-image': 'linear-gradient(135deg,#ccfbf1,#ede9fe,#ccfbf1)',
           },
         },
         "accordion-down": {

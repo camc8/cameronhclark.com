@@ -1,6 +1,44 @@
 @font-face {
   font-family: UbuntuMono;
-  src: url("./assets/UbuntuMono.ttf");
+  src: url("./assets/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: UbuntuMono;
+  src: url("./assets/fonts/UbuntuMono/UbuntuMono-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("./assets/fonts/Poppins/Poppins-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("./assets/fonts/Poppins/Poppins-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("./assets/fonts/Poppins/Poppins-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("./assets/fonts/Poppins/Poppins-Thin.ttf");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("./assets/fonts/Poppins/Poppins-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
 }
 @tailwind base;
 @tailwind components;
