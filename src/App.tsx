@@ -20,9 +20,9 @@ import {
   BiLogoGit,
   BiLogoLinkedinSquare,
 } from "react-icons/bi";
-import { SiVite, SiAdobephotoshop, SiRetroarch } from "react-icons/si";
+import { SiVite, SiAdobephotoshop /*SiRetroarch */ } from "react-icons/si";
 import { TbBrandMysql } from "react-icons/tb";
-import { RiQuillPenFill } from "react-icons/ri";
+// import { RiQuillPenFill } from "react-icons/ri";
 // import { FiArrowRight } from "react-icons/fi";
 function App() {
   return (
@@ -31,6 +31,7 @@ function App() {
         <Nav></Nav>
         {/* <div class="flex mt-20 gap-2 [&_img]:w-[100%] [&_img]:rounded-lg">
                 <div class="col w-[50%] md:w-[33%] lg:w-[25%] space-y-2"></div> */}
+
         <section className="grid grid-cols-4 grid-rows-1 px-8 md:px-28 py-10 gap-8">
           {/* Hero */}
           <div className="col-span-4 mb-24 space-y-3">
@@ -153,7 +154,7 @@ function App() {
           </div>
 
           {/* About me */}
-          <div className="cursor-pointer col-span-4 md:col-span-2 rounded-3xl shadow-lg shadow-slate-100 bg-rose-50 p-8 group">
+          <div className="cursor-pointer col-span-4 md:col-span-2 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-rose-50 p-8 group">
             <div className="grid gap-2 group-hover:scale-[1.02] duration-200 ease-linear">
               <h2 className="text-slate-800 text-xl">About me</h2>
               <p className="text-slate-700">
@@ -169,7 +170,7 @@ function App() {
             </div>
           </div>
 
-          {/* Projects */}
+          {/* Projects
           <div className="col-span-4 md:col-span-2 rounded-3xl shadow-lg shadow-slate-100 bg-slate-100 p-8 group">
             <div className="group-hover:scale-[1.02] duration-200 ease-linear">
               <h2 className="text-slate-800 text-xl mb-2">Projects</h2>
@@ -200,14 +201,14 @@ function App() {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* FormZen */}
-          <div className="col-span-4 md:col-span-2 rounded-3xl shadow-lg shadow-slate-100 bg-violet-500 pt-8 px-8 group overflow-hidden">
+          <div className="col-span-4 md:col-span-2 rounded-3xl shadow-lg shadow-slate-100 bg-indigo-100 pt-8 px-8 group overflow-hidden">
             <div className="group-hover:scale-[1.02] duration-200 ease-linear">
               <div className="mb-8 grid gap-1">
-                <h2 className="text-slate-50 text-xl">FormZen</h2>
-                <p className="text-slate-100 font-light">
+                <h2 className="text-slate-800 text-xl">FormZen</h2>
+                <p className="text-slate-700 font-light">
                   Speeds up filling out and signing real estate forms using PDF
                   Lib, Pelias geocoder, local government APIs, and React
                 </p>
@@ -221,13 +222,13 @@ function App() {
           </div>
 
           {/* DOS */}
-          <div className="col-span-4 md:col-span-2 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-teal-600 pt-8 px-8 group overflow-hidden">
+          <div className="col-span-4 md:col-span-2 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-sky-100 pt-8 px-8 group overflow-hidden">
             <div className="group-hover:scale-[1.02] duration-200 ease-linear grid content-between h-full">
               <div className="mb-8 grid gap-1">
-                <h2 className="text-slate-50 text-xl">
+                <h2 className="text-slate-800 text-xl">
                   DOS Healthcare Reporting
                 </h2>
-                <p className="text-slate-100 font-light">
+                <p className="text-slate-700 font-light">
                   Patient to nurse reporting system for assisted living and long
                   term care facilities
                 </p>
@@ -242,13 +243,13 @@ function App() {
 
           {/* Retro UI */}
           <a
+            className="col-span-4 md:col-span-2 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-neutral-100 pt-8 px-8 group"
             href="https://github.com/camc8/RetroUI"
-            target="_blank"
-            className="col-span-4 md:col-span-2 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-slate-500 pt-8 px-8 group">
+            target="_blank">
             <div className="group-hover:scale-[1.02] duration-200 ease-linear grid items-start h-full">
               <div className="grid gap-1">
-                <h2 className="text-slate-50 text-xl">Retro UI</h2>
-                <p className="text-slate-100 font-light">
+                <h2 className="text-slate-800 text-xl">Retro UI</h2>
+                <p className="text-slate-700 font-light">
                   A 90's themed UI kit using Tailwind CSS
                 </p>
               </div>
@@ -264,11 +265,11 @@ function App() {
           <a
             href="https://xcorpllc.com"
             target="_blank"
-            className="col-span-4 md:col-span-2 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-indigo-600 pt-8 px-8 group overflow-hidden">
+            className="col-span-4 md:col-span-2 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-blue-100 pt-8 px-8 group overflow-hidden">
             <div className="group-hover:scale-[1.02] duration-200 ease-linear">
               <div className="mb-8 grid gap-1">
-                <h2 className="text-slate-50 text-xl">XCORP LLC</h2>
-                <p className="text-slate-100 font-light">
+                <h2 className="text-slate-800 text-xl">XCORP LLC</h2>
+                <p className="text-slate-700 font-light">
                   Corporate site for real estate management company
                 </p>
               </div>
@@ -280,7 +281,7 @@ function App() {
             </div>
           </a>
 
-          {/* Optibot */}
+          {/* Optibot
           <a
             href="https://github.com/camc8/optibot"
             target="_blank"
@@ -299,10 +300,10 @@ function App() {
                 alt=""
               />
             </div>
-          </a>
+          </a> */}
 
           {/* Contact */}
-          <div className="col-span-4 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-sky-100 p-12 group">
+          <div className="col-span-4 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-slate-100 p-12 group">
             <div className="group-hover:scale-[1.02] duration-200 ease-linear">
               <h2 className="text-slate-700 text-3xl font-semibold mb-2">
                 Let's make something great!
