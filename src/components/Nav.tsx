@@ -13,12 +13,7 @@ export default function Nav() {
   return (
     <nav className="w-screen drop-shadow-sm px-8 md:px-28 z-20">
       {navOpen && <style>{body}</style>}
-      <div className="flex flex-wrap items-center justify-between mx-auto h-[7rem] lg:mt-10">
-        <div className="font-semibold text-slate-50 h-full">
-          <a href="/">
-            <img src="" alt="" className="h-full py-4 lg:py-0 lg:pb-8" />
-          </a>
-        </div>
+      <div className="flex flex-wrap items-center justify-end mx-auto h-[7rem] lg:mt-10">
         <div onClick={() => setNavOpen(!navOpen)} className="z-50">
           <Hamburger open={navOpen}></Hamburger>
         </div>
