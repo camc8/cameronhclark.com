@@ -48,12 +48,14 @@ function App() {
             <div className="gap-3 flex">
               <a
                 href="https://github.com/camc8"
+                title="My Github"
                 target="_blank"
                 className="p-3 border rounded-full text-xl hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200">
                 <FaGithub />
               </a>
               <a
                 href="https://www.linkedin.com/in/cameron-clark-6b13281b2"
+                title="My LinkedIn"
                 target="_blank"
                 className="p-3 border rounded-full text-xl hover:bg-sky-600 hover:border-sky-600 hover:text-white duration-200">
                 <BiLogoLinkedinSquare />
@@ -235,6 +237,7 @@ function App() {
           <a
             className="col-span-4 md:col-span-2 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-neutral-100 pt-8 px-8 group"
             href="https://github.com/camc8/RetroUI"
+            title="Retro UI Github"
             target="_blank">
             <div className="group-hover:scale-[1.02] duration-200 ease-linear grid items-start h-full">
               <div className="grid gap-1">
@@ -275,6 +278,7 @@ function App() {
           {/* Optibot */}
           <a
             href="https://github.com/camc8/optibot"
+            title="Optibot Github"
             target="_blank"
             className="col-span-4 md:col-span-2 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-violet-50 pt-8 px-8 group overflow-hidden">
             <div className="group-hover:scale-[1.02] duration-200 ease-linear">
@@ -303,28 +307,32 @@ function App() {
             <div className="text-slate-700 space-y-3">
               Send me an email at
               <a
+                title="Send me an email"
                 className="mx-1 text-slate-900"
                 href="mailto:cameron@xcorpllc.com">
                 cameron@xcorpllc.com
               </a>
               <div className="gap-3 flex items-center pt-8">
                 <a
+                  title="Send me an email"
                   href="mailto:cameron@xcorpllc.com"
                   target="_blank"
                   className="p-3 rounded-full bg-slate-700 text-slate-50 hover:bg-slate-900 hover:border-slate-900 duration-200">
                   Contact me
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/cameron-clark-6b13281b2"
-                  target="_blank"
-                  className="p-3 rounded-full text-xl bg-slate-50 hover:bg-sky-600 hover:border-sky-600 hover:text-white duration-200">
-                  <BiLogoLinkedinSquare />
-                </a>
-                <a
                   href="https://github.com/camc8"
+                  title="My Github"
                   target="_blank"
                   className="p-3 rounded-full text-xl bg-slate-50 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200">
                   <FaGithub />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/cameron-clark-6b13281b2"
+                  title="My LinkedIn"
+                  target="_blank"
+                  className="p-3 rounded-full text-xl bg-slate-50 hover:bg-sky-600 hover:border-sky-600 hover:text-white duration-200">
+                  <BiLogoLinkedinSquare />
                 </a>
               </div>
             </div>
