@@ -25,19 +25,15 @@ import {
   SiAdobephotoshop,
   SiRedis,
   SiRemix,
-  SiMongodb /*SiRetroarch */,
+  SiMongodb,
 } from "react-icons/si";
 import { TbBrandMysql } from "react-icons/tb";
-// import { RiQuillPenFill } from "react-icons/ri";
-// import { FiArrowRight } from "react-icons/fi";
+
 function App() {
   return (
     <>
       <div className="">
         <Nav></Nav>
-        {/* <div class="flex mt-20 gap-2 [&_img]:w-[100%] [&_img]:rounded-lg">
-                <div class="col w-[50%] md:w-[33%] lg:w-[25%] space-y-2"></div> */}
-
         <section className="grid grid-cols-4 grid-rows-1 px-8 md:px-28 py-10 gap-8">
           {/* Hero */}
           <div className="col-span-4 mb-24 space-y-3">
@@ -197,38 +193,6 @@ function App() {
                 </span> */}
             </div>
           </div>
-          {/* Projects
-          <div className="col-span-4 md:col-span-2 rounded-3xl shadow-lg shadow-slate-100 bg-slate-100 p-8 group">
-            <div className="group-hover:scale-[1.02] duration-200 ease-linear">
-              <h2 className="text-slate-800 text-xl mb-2">Projects</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 my-6">
-                <div className="p-5 bg-pink-200 hover:bg-pink-300 duration-200 cursor-pointer text-pink-700 rounded-xl flex items-center gap-3 font-semibold">
-                  <RiQuillPenFill className="text-3xl" /> Form filler
-                </div>
-                <div className="p-5 bg-sky-200 hover:bg-sky-300 duration-200 cursor-pointer text-sky-700 rounded-xl flex items-center gap-3 font-semibold">
-                  <SiRetroarch className="text-4xl" /> Retro UI
-                </div>
-                <a
-                  href="https://pollination-pictures.com"
-                  target="_blank"
-                  className="p-5 bg-indigo-200 hover:bg-indigo-300 duration-200 cursor-pointer text-indigo-700 rounded-xl flex items-center gap-3 font-semibold">
-                  <FaFilm className="text-3xl" /> Pollination Pictures
-                </a>
-                <a
-                  href="https://xcorpllc.com"
-                  target="_blank"
-                  className="p-5 bg-blue-200 hover:bg-blue-300 duration-200 cursor-pointer text-blue-700 rounded-xl flex items-center gap-3 font-semibold">
-                  <FaBuilding className="text-3xl" /> XCORP LLC
-                </a>
-                <a
-                  href="https://github.com/camc8/Optibot"
-                  target="_blank"
-                  className="p-5 bg-purple-200 hover:bg-purple-300 duration-200 cursor-pointer text-purple-700 rounded-xl flex items-center gap-3 font-semibold">
-                  <FaDiscord className="text-3xl" /> Optibot
-                </a>
-              </div>
-            </div>
-          </div> */}
           {/* FormZen */}
           <div className="col-span-4 md:col-span-2 rounded-3xl shadow-lg shadow-slate-100 bg-indigo-100 pt-8 px-8 group overflow-hidden">
             <div className="group-hover:scale-[1.02] duration-200 ease-linear">
@@ -241,6 +205,7 @@ function App() {
               </div>
               <img
                 src="images/form-filler.jpg"
+                loading="lazy"
                 className="object-cover w-2/3 mx-auto rounded-t-2xl shadow-lg"
                 alt=""
               />
@@ -260,6 +225,7 @@ function App() {
               </div>
               <img
                 src="images/dos.jpg"
+                loading="lazy"
                 className="object-cover w-3/4 mx-auto rounded-t-2xl shadow-lg"
                 alt=""
               />
@@ -279,6 +245,7 @@ function App() {
               </div>
               <img
                 src="images/retro-ui.jpg"
+                loading="lazy"
                 className="object-cover w-5/6 mx-auto rounded shadow-lg my-8"
                 alt=""
               />
@@ -298,6 +265,7 @@ function App() {
               </div>
               <img
                 src="images/xcorp.jpg"
+                loading="lazy"
                 className="object-cover w-3/4 mx-auto rounded-t-2xl shadow-lg"
                 alt=""
               />
@@ -319,6 +287,7 @@ function App() {
               </div>
               <img
                 src="images/optibot.jpg"
+                loading="lazy"
                 className="object-cover w-3/4 mx-auto rounded-t-2xl shadow-lg"
                 alt=""
               />
