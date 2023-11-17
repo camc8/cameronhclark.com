@@ -240,7 +240,7 @@ function App() {
                 </p>
               </div>
               <img
-                src="images/form-filler.png"
+                src="images/form-filler.jpg"
                 className="object-cover w-2/3 mx-auto rounded-t-2xl shadow-lg"
                 alt=""
               />
@@ -259,7 +259,7 @@ function App() {
                 </p>
               </div>
               <img
-                src="images/dos.png"
+                src="images/dos.jpg"
                 className="object-cover w-3/4 mx-auto rounded-t-2xl shadow-lg"
                 alt=""
               />
@@ -278,7 +278,7 @@ function App() {
                 </p>
               </div>
               <img
-                src="images/retro-ui.png"
+                src="images/retro-ui.jpg"
                 className="object-cover w-5/6 mx-auto rounded shadow-lg my-8"
                 alt=""
               />
@@ -297,7 +297,7 @@ function App() {
                 </p>
               </div>
               <img
-                src="images/xcorp.png"
+                src="images/xcorp.jpg"
                 className="object-cover w-3/4 mx-auto rounded-t-2xl shadow-lg"
                 alt=""
               />
@@ -318,7 +318,7 @@ function App() {
                 </p>
               </div>
               <img
-                src="images/optibot.png"
+                src="images/optibot.jpg"
                 className="object-cover w-3/4 mx-auto rounded-t-2xl shadow-lg"
                 alt=""
               />
