@@ -46,8 +46,8 @@ function App() {
               <br />
               Clark
             </h1>
-            <p className="font-mon font-light text-xl text-slate-600">
-              Full stack software engineer + web developer
+            <p className="font-mon font-light text-lg md:text-xl text-slate-600">
+              Full stack software engineer & web developer based in Miami
             </p>
             <div className="gap-3 flex">
               <a
@@ -71,7 +71,7 @@ function App() {
                 <div>
                   <h2 className="text-slate-800 text-lg mb-2">Front end</h2>
 
-                  <ul className="mt-2 grid gap-2 [&>li]:inline-flex [&>li]:items-center">
+                  <ul className="mt-2 grid gap-4 [&>li]:inline-flex [&>li]:items-center">
                     <li>
                       <FaHtml5 className="text-orange-600 text-2xl" />
                       &nbsp;HTML
@@ -101,7 +101,7 @@ function App() {
                 <div>
                   <h2 className="text-slate-800 text-lg mb-2">Back end</h2>
 
-                  <ul className="mt-2 grid gap-2 [&>li]:inline-flex [&>li]:items-center">
+                  <ul className="mt-2 grid gap-4 [&>li]:inline-flex [&>li]:items-center">
                     <li>
                       <BiLogoPhp className="text-cyan-700 text-2xl" />
                       &nbsp;PHP / Laravel
@@ -138,7 +138,7 @@ function App() {
                 </div>
                 <div>
                   <h2 className="text-slate-800 text-lg mb-2">Dev</h2>
-                  <ul className="mt-2 grid gap-2 [&>li]:inline-flex [&>li]:items-center">
+                  <ul className="mt-2 grid gap-4 [&>li]:inline-flex [&>li]:items-center">
                     <li>
                       <BiLogoGit className="text-slate-700 text-2xl" />
                       &nbsp;Git
@@ -167,7 +167,7 @@ function App() {
                 </div>
                 <div>
                   <h2 className="text-slate-800 text-lg mb-2">Design</h2>
-                  <ul className="mt-2 grid gap-2 [&>li]:inline-flex [&>li]:items-center">
+                  <ul className="mt-2 grid gap-4 [&>li]:inline-flex [&>li]:items-center">
                     <li>
                       <SiAdobephotoshop className="text-blue-800 text-2xl" />
                       &nbsp;Photoshop
@@ -241,7 +241,7 @@ function App() {
               </div>
               <img
                 src="images/form-filler.png"
-                className="object-cover w-2/3 mx-auto rounded-t-2xl"
+                className="object-cover w-2/3 mx-auto rounded-t-2xl shadow-lg"
                 alt=""
               />
             </div>
@@ -260,7 +260,7 @@ function App() {
               </div>
               <img
                 src="images/dos.png"
-                className="object-cover w-3/4 mx-auto rounded-t-2xl"
+                className="object-cover w-3/4 mx-auto rounded-t-2xl shadow-lg"
                 alt=""
               />
             </div>
@@ -279,7 +279,7 @@ function App() {
               </div>
               <img
                 src="images/retro-ui.png"
-                className="object-cover w-2/3 mx-auto my-12"
+                className="object-cover w-5/6 mx-auto rounded shadow-lg my-8"
                 alt=""
               />
             </div>
@@ -298,7 +298,7 @@ function App() {
               </div>
               <img
                 src="images/xcorp.png"
-                className="object-cover w-3/4 mx-auto rounded-t-2xl"
+                className="object-cover w-3/4 mx-auto rounded-t-2xl shadow-lg"
                 alt=""
               />
             </div>
@@ -313,13 +313,13 @@ function App() {
               <div className="mb-8 grid gap-1">
                 <h2 className="text-slate-800 text-xl">Optibot</h2>
                 <p className="text-slate-700 font-light">
-                  Simple Python UI for automating messaging in Discord and other
+                  Python UI designed to automate messaging in Discord and other
                   chat platforms
                 </p>
               </div>
               <img
                 src="images/optibot.png"
-                className="object-cover w-3/4 mx-auto rounded-t-2xl"
+                className="object-cover w-3/4 mx-auto rounded-t-2xl shadow-lg"
                 alt=""
               />
             </div>
