@@ -7,10 +7,10 @@ import {
   FaGithub,
   FaFigma,
   FaNpm,
-  FaBuilding,
-  FaDiscord,
+  FaJava,
+  FaDocker,
+  FaAws,
 } from "react-icons/fa";
-import { FaFilm } from "react-icons/fa6";
 import {
   BiLogoTailwindCss,
   BiLogoJavascript,
@@ -20,7 +20,13 @@ import {
   BiLogoGit,
   BiLogoLinkedinSquare,
 } from "react-icons/bi";
-import { SiVite, SiAdobephotoshop /*SiRetroarch */ } from "react-icons/si";
+import {
+  SiVite,
+  SiAdobephotoshop,
+  SiRedis,
+  SiRemix,
+  SiMongodb /*SiRetroarch */,
+} from "react-icons/si";
 import { TbBrandMysql } from "react-icons/tb";
 // import { RiQuillPenFill } from "react-icons/ri";
 // import { FiArrowRight } from "react-icons/fi";
@@ -58,7 +64,6 @@ function App() {
               </a>
             </div>
           </div>
-
           {/* Skills */}
           <div className="group col-span-4 lg:col-span-2 row-span-2 rounded-3xl shadow-lg shadow-slate-100 animate-skills p-8 text-slate-700">
             <div className="group-hover:scale-[1.02] duration-200 ease-linear">
@@ -99,19 +104,35 @@ function App() {
                   <ul className="mt-2 grid gap-2 [&>li]:inline-flex [&>li]:items-center">
                     <li>
                       <BiLogoPhp className="text-cyan-700 text-2xl" />
-                      &nbsp;PHP / Laravel / Blade
+                      &nbsp;PHP / Laravel
                     </li>
                     <li>
                       <FaNodeJs className="text-lime-500 text-2xl" />
                       &nbsp;Node
                     </li>
                     <li>
+                      <SiRemix className="text-black text-lg mx-1" />
+                      &nbsp;Remix.js
+                    </li>
+                    <li>
                       <BiLogoPython className="text-sky-700 text-2xl" />
                       &nbsp;Python
                     </li>
                     <li>
+                      <FaJava className="text-orange-500 text-2xl" />
+                      &nbsp;Java
+                    </li>
+                    <li>
                       <TbBrandMysql className="text-sky-800 text-2xl" />
-                      &nbsp;Mysql / MariaDB / Sqlite
+                      &nbsp;MySQL / SQLite
+                    </li>
+                    <li>
+                      <SiRedis className="text-red-600 text-2xl" />
+                      &nbsp;Redis
+                    </li>
+                    <li>
+                      <SiMongodb className="text-green-500 text-2xl" />
+                      &nbsp;MongoDB
                     </li>
                   </ul>
                 </div>
@@ -134,6 +155,14 @@ function App() {
                       <FaNpm className="text-red-500 text-2xl" />
                       &nbsp;NPM
                     </li>
+                    <li>
+                      <FaDocker className="text-blue-700 text-2xl" />
+                      &nbsp;Docker
+                    </li>
+                    <li>
+                      <FaAws className="text-yellow-500 text-2xl" />
+                      &nbsp;AWS
+                    </li>
                   </ul>
                 </div>
                 <div>
@@ -152,14 +181,13 @@ function App() {
               </div>
             </div>
           </div>
-
           {/* About me */}
           <div className="cursor-pointer col-span-4 md:col-span-2 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-rose-50 p-8 group">
             <div className="grid gap-2 group-hover:scale-[1.02] duration-200 ease-linear">
               <h2 className="text-slate-800 text-xl">About me</h2>
               <p className="text-slate-700">
                 I grew up with an interest in engineering and software and it
-                continues to be a passion of mine to this day. With over 5 years
+                continues to be a passion of mine to this day. With over 8 years
                 of experience with web design, full stack development, and
                 backend/database technology, I can turn pretty much any idea
                 into a reality.
@@ -169,7 +197,6 @@ function App() {
                 </span> */}
             </div>
           </div>
-
           {/* Projects
           <div className="col-span-4 md:col-span-2 rounded-3xl shadow-lg shadow-slate-100 bg-slate-100 p-8 group">
             <div className="group-hover:scale-[1.02] duration-200 ease-linear">
@@ -202,7 +229,6 @@ function App() {
               </div>
             </div>
           </div> */}
-
           {/* FormZen */}
           <div className="col-span-4 md:col-span-2 rounded-3xl shadow-lg shadow-slate-100 bg-indigo-100 pt-8 px-8 group overflow-hidden">
             <div className="group-hover:scale-[1.02] duration-200 ease-linear">
@@ -220,7 +246,6 @@ function App() {
               />
             </div>
           </div>
-
           {/* DOS */}
           <div className="col-span-4 md:col-span-2 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-sky-100 pt-8 px-8 group overflow-hidden">
             <div className="group-hover:scale-[1.02] duration-200 ease-linear grid content-between h-full">
@@ -240,7 +265,6 @@ function App() {
               />
             </div>
           </div>
-
           {/* Retro UI */}
           <a
             className="col-span-4 md:col-span-2 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-neutral-100 pt-8 px-8 group"
@@ -260,13 +284,12 @@ function App() {
               />
             </div>
           </a>
-
           {/* XCORP LLC */}
           <a
             href="https://xcorpllc.com"
             target="_blank"
             className="col-span-4 md:col-span-2 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-blue-100 pt-8 px-8 group overflow-hidden">
-            <div className="group-hover:scale-[1.02] duration-200 ease-linear">
+            <div className="group-hover:scale-[1.02] duration-200 ease-linear grid content-between h-full">
               <div className="mb-8 grid gap-1">
                 <h2 className="text-slate-800 text-xl">XCORP LLC</h2>
                 <p className="text-slate-700 font-light">
@@ -281,15 +304,15 @@ function App() {
             </div>
           </a>
 
-          {/* Optibot
+          {/* Optibot */}
           <a
             href="https://github.com/camc8/optibot"
             target="_blank"
-            className="col-span-4 md:col-span-2 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-blue-900 pt-8 px-8 group overflow-hidden">
+            className="col-span-4 md:col-span-2 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-violet-50 pt-8 px-8 group overflow-hidden">
             <div className="group-hover:scale-[1.02] duration-200 ease-linear">
               <div className="mb-8 grid gap-1">
-                <h2 className="text-slate-50 text-xl">Optibot</h2>
-                <p className="text-slate-100 font-light">
+                <h2 className="text-slate-800 text-xl">Optibot</h2>
+                <p className="text-slate-700 font-light">
                   Simple Python UI for automating messaging in Discord and other
                   chat platforms
                 </p>
@@ -300,41 +323,40 @@ function App() {
                 alt=""
               />
             </div>
-          </a> */}
-
+          </a>
           {/* Contact */}
-          <div className="col-span-4 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-slate-100 p-12 group">
-            <div className="group-hover:scale-[1.02] duration-200 ease-linear">
-              <h2 className="text-slate-700 text-3xl font-semibold mb-2">
-                Let's make something great!
-              </h2>
-              <div className="text-slate-700 space-y-3">
-                Send me an email at
+          <div
+            id="contact"
+            className="col-span-4 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-slate-100 p-12">
+            <h2 className="text-slate-700 text-3xl font-semibold mb-2">
+              Let's make something great!
+            </h2>
+            <div className="text-slate-700 space-y-3">
+              Send me an email at
+              <a
+                className="mx-1 text-slate-900"
+                href="mailto:cameron@xcorpllc.com">
+                cameron@xcorpllc.com
+              </a>
+              <div className="gap-3 flex items-center pt-8">
                 <a
-                  className="mx-1 text-slate-900"
-                  href="mailto:cameron@xcorpllc.com">
-                  cameron@xcorpllc.com
+                  href="mailto:cameron@xcorpllc.com"
+                  target="_blank"
+                  className="p-3 rounded-full bg-slate-700 text-slate-50 hover:bg-slate-900 hover:border-slate-900 duration-200">
+                  Contact me
                 </a>
-                <div className="gap-3 flex items-center pt-8">
-                  <a
-                    href="mailto:cameron@xcorpllc.com"
-                    target="_blank"
-                    className="p-3 rounded-full bg-slate-700 text-slate-50 hover:bg-slate-900 hover:border-slate-900 duration-200">
-                    Contact me
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/cameron-clark-6b13281b2"
-                    target="_blank"
-                    className="p-3 rounded-full text-xl bg-slate-50 hover:bg-sky-600 hover:border-sky-600 hover:text-white duration-200">
-                    <BiLogoLinkedinSquare />
-                  </a>
-                  <a
-                    href="https://github.com/camc8"
-                    target="_blank"
-                    className="p-3 rounded-full text-xl bg-slate-50 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200">
-                    <FaGithub />
-                  </a>
-                </div>
+                <a
+                  href="https://www.linkedin.com/in/cameron-clark-6b13281b2"
+                  target="_blank"
+                  className="p-3 rounded-full text-xl bg-slate-50 hover:bg-sky-600 hover:border-sky-600 hover:text-white duration-200">
+                  <BiLogoLinkedinSquare />
+                </a>
+                <a
+                  href="https://github.com/camc8"
+                  target="_blank"
+                  className="p-3 rounded-full text-xl bg-slate-50 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200">
+                  <FaGithub />
+                </a>
               </div>
             </div>
           </div>

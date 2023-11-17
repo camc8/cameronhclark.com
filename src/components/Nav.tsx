@@ -28,21 +28,27 @@ export default function Nav() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed top-0 right-0 h-screen w-screen grid px-8 md:px-28 py-[7rem] backdrop-blur-lg font-light text-center text-4xl">
-              <a href="#" className="text-slate-800 active:text-slate-700">
+              className="fixed top-0 right-0 h-screen w-screen grid place-content-center gap-20 px-8 md:px-28 py-[7rem] backdrop-blur-lg font-light text-center text-4xl">
+              <a href="/" className="text-slate-800 active:text-slate-700">
                 ./
               </a>
-              <a href="#" className="text-slate-800 active:text-slate-700">
-                ./portfolio
+              <a
+                onClick={() => setNavOpen(false)}
+                href="#contact"
+                className="text-slate-800 active:text-slate-700">
+                Contact
               </a>
-              <a href="#" className="text-slate-800 active:text-slate-700">
-                ./about-me
+              <a
+                href="https://github.com/camc8/"
+                target="_blank"
+                className="text-slate-800 active:text-slate-700">
+                Github
               </a>
-              <a href="#" className="text-slate-800 active:text-slate-700">
-                ./contact
-              </a>
-              <a href="#" className="text-slate-800 active:text-slate-700">
-                ./socials
+              <a
+                href="https://www.linkedin.com/in/cameron-clark-6b13281b2"
+                target="_blank"
+                className="text-slate-800 active:text-slate-700">
+                LinkedIn
               </a>
             </motion.div>
           )}
