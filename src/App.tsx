@@ -26,6 +26,7 @@ import {
   SiRedis,
   SiRemix,
   SiMongodb,
+  SiJest,
 } from "react-icons/si";
 import { TbBrandMysql } from "react-icons/tb";
 
@@ -65,7 +66,7 @@ function App() {
           {/* Skills */}
           <div className="max-sm:order-2 group col-span-4 lg:col-span-2 row-span-2 rounded-3xl shadow-lg shadow-slate-100 animate-skills p-8 text-slate-700">
             <div className="group-hover:scale-[1.02] duration-200 ease-linear">
-              <div className="grid  grid-cols-1 sm:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div>
                   <h2 className="text-slate-800 text-lg mb-2">Front end</h2>
 
@@ -134,7 +135,7 @@ function App() {
                     </li>
                   </ul>
                 </div>
-                <div>
+                <div className="self-end">
                   <h2 className="text-slate-800 text-lg mb-2">Dev</h2>
                   <ul className="mt-2 grid gap-4 [&>li]:inline-flex [&>li]:items-center">
                     <li>
@@ -150,6 +151,10 @@ function App() {
                       &nbsp;Vite
                     </li>
                     <li>
+                      <SiJest className="text-red-800 text-2xl" />
+                      &nbsp;Jest/Vitest
+                    </li>
+                    <li>
                       <FaNpm className="text-red-500 text-2xl" />
                       &nbsp;NPM
                     </li>
@@ -163,7 +168,7 @@ function App() {
                     </li>
                   </ul>
                 </div>
-                <div>
+                <div className="self-end">
                   <h2 className="text-slate-800 text-lg mb-2">Design</h2>
                   <ul className="mt-2 grid gap-4 [&>li]:inline-flex [&>li]:items-center">
                     <li>
