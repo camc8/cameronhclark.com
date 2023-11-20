@@ -13,8 +13,8 @@ export default function Nav() {
   return (
     <nav className="w-screen drop-shadow-sm px-8 md:px-28 z-20">
       {navOpen && <style>{body}</style>}
-      <div className="flex flex-wrap items-center justify-end mx-auto h-[7rem] lg:mt-10">
-        <div onClick={() => setNavOpen(!navOpen)} className="z-50">
+      <div className="flex flex-wrap items-center justify-end mx-auto h-[7rem]">
+        <div onClick={() => setNavOpen(!navOpen)} className="z-50 lg:mt-10">
           <Hamburger open={navOpen}></Hamburger>
         </div>
         <AnimatePresence>
@@ -23,7 +23,7 @@ export default function Nav() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed top-0 right-0 h-screen w-screen grid place-content-center gap-20 px-8 md:px-28 py-[7rem] backdrop-blur-lg font-thin text-center text-4xl">
+              className="fixed top-0 right-0 h-screen w-screen grid place-content-center gap-20 px-8 md:px-28 bg-white font-thin text-center text-4xl">
               <a
                 href="/"
                 className="text-slate-800 active:text-slate-700"
