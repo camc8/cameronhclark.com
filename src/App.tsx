@@ -197,7 +197,7 @@ function App() {
           </div>
           {/* FormZen */}
           <div className="max-sm:order-3 col-span-4 md:col-span-2 rounded-3xl shadow-lg shadow-slate-100 bg-red-50 pt-8 px-8 group overflow-hidden">
-            <div className="group-hover:scale-[1.02] duration-200 ease-linear">
+            <div className="group-hover:scale-[1.02] duration-200 ease-linear grid content-between h-full">
               <div className="mb-8 grid gap-1">
                 <h2 className="text-slate-800 text-xl">FormZen</h2>
                 <p className="text-slate-700 font-light">
@@ -208,7 +208,7 @@ function App() {
               <img
                 src="images/form-filler.jpg"
                 loading="lazy"
-                className="object-cover w-2/3 mx-auto rounded-t shadow-lg"
+                className="object-cover w-2/3 mx-auto rounded-t-lg shadow-lg"
                 alt=""
               />
             </div>
@@ -228,7 +228,7 @@ function App() {
               <img
                 src="images/dos.jpg"
                 loading="lazy"
-                className="object-cover w-3/4 mx-auto rounded-t shadow-lg"
+                className="object-cover w-3/4 mx-auto rounded-t-lg shadow-lg"
                 alt=""
               />
             </div>
@@ -249,7 +249,7 @@ function App() {
               <img
                 src="images/retro-ui.jpg"
                 loading="lazy"
-                className="object-cover w-5/6 mx-auto rounded shadow-lg my-8"
+                className="object-cover w-5/6 mx-auto rounded-lg shadow-lg my-8"
                 alt=""
               />
             </div>
@@ -269,7 +269,7 @@ function App() {
               <img
                 src="images/xcorp.jpg"
                 loading="lazy"
-                className="object-cover w-3/4 mx-auto rounded-t shadow-lg"
+                className="object-cover w-3/4 mx-auto rounded-t-lg shadow-lg"
                 alt=""
               />
             </div>
@@ -292,7 +292,7 @@ function App() {
               <img
                 src="images/optibot.jpg"
                 loading="lazy"
-                className="object-cover w-3/4 mx-auto rounded-t shadow-lg"
+                className="object-cover w-3/4 mx-auto rounded-t-lg shadow-lg"
                 alt=""
               />
             </div>
