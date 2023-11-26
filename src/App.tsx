@@ -305,15 +305,15 @@ function App() {
           {/* Contact */}
           <div
             id="contact"
-            className="max-sm:order-8 col-span-4 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-slate-100 p-12">
+            className="max-sm:order-8 col-span-4 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-slate-100 p-8">
             <h2 className="text-slate-700 text-3xl font-semibold mb-2">
               Let's make something great!
             </h2>
-            <div className="text-slate-700 space-y-3 mt-3">
+            <div className="text-slate-800 space-y-3 mt-3 font-light">
               Send me an email at
               <a
                 title="Send me an email"
-                className="mx-1 text-slate-800"
+                className="mx-1"
                 href="mailto:cameron@xcorpllc.com">
                 cameron@xcorpllc.com
               </a>
