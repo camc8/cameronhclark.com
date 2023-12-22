@@ -213,7 +213,7 @@ function App() {
               <img
                 src="images/form-filler.jpg"
                 loading="lazy"
-                className="object-cover w-2/3 mx-auto rounded-t-lg shadow-lg"
+                className="object-cover w-3/4 mx-auto rounded-lg shadow-lg my-8"
                 alt=""
               />
             </div>
@@ -233,7 +233,7 @@ function App() {
               <img
                 src="images/dos.jpg"
                 loading="lazy"
-                className="object-cover w-3/4 mx-auto rounded-t-lg shadow-lg"
+                className="object-cover w-3/4 mx-auto rounded-lg shadow-lg my-8"
                 alt=""
               />
             </div>
@@ -254,7 +254,7 @@ function App() {
               <img
                 src="images/retro-ui.jpg"
                 loading="lazy"
-                className="object-cover w-5/6 mx-auto rounded-lg shadow-lg my-8"
+                className="object-cover w-3/4 mx-auto rounded-lg shadow-lg my-8"
                 alt=""
               />
             </div>
@@ -274,7 +274,7 @@ function App() {
               <img
                 src="images/xcorp.jpg"
                 loading="lazy"
-                className="object-cover w-3/4 mx-auto rounded-t-lg shadow-lg"
+                className="object-cover w-3/4 mx-auto rounded-lg shadow-lg my-8"
                 alt=""
               />
             </div>
@@ -297,7 +297,7 @@ function App() {
               <img
                 src="images/optibot.jpg"
                 loading="lazy"
-                className="object-cover w-3/4 mx-auto rounded-t-lg shadow-lg"
+                className="object-cover w-3/4 mx-auto rounded-lg shadow-lg my-8"
                 alt=""
               />
             </div>
@@ -306,10 +306,10 @@ function App() {
           <div
             id="contact"
             className="max-sm:order-8 col-span-4 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-slate-100 p-8">
-            <h2 className="text-slate-700 text-3xl font-semibold mb-2">
+            <h2 className="text-slate-700 text-xl">
               Let's make something great!
             </h2>
-            <div className="text-slate-800 space-y-3 mt-3 font-light">
+            <div className="text-slate-800 space-y-3 font-light">
               Send me an email at
               <a
                 title="Send me an email"
