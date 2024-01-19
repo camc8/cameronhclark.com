@@ -33,7 +33,7 @@ import { TbBrandMysql } from "react-icons/tb";
 function App() {
   return (
     <>
-      <div className="">
+      <div className="[font-display:'swap']">
         <Nav></Nav>
         <section className="grid grid-cols-4 grid-rows-1 px-8 md:px-28 py-10 gap-8">
           {/* Hero */}
