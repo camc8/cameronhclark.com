@@ -37,7 +37,7 @@ function App() {
         <Nav></Nav>
         <section className="grid grid-cols-4 grid-rows-1 px-8 md:px-28 py-10 gap-8">
           {/* Hero */}
-          <div className="col-span-4 mb-24 space-y-3">
+          <div className="col-span-2 mb-24 space-y-3">
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-transparent bg-clip-text animate-my-name w-fit">
               Cameron
               <br />
@@ -62,6 +62,14 @@ function App() {
                 <BiLogoLinkedinSquare />
               </a>
             </div>
+          </div>
+          <div className="col-span-2 flex">
+            <img
+              src="images/cameron-clark.jpg"
+              alt="Cameron Clark"
+              title="Cameron Clark"
+              className="rounded-full h-[9rem] lg:h-[11rem] w-[9rem] lg:w-[11rem] ml-auto"
+            />
           </div>
           {/* Skills */}
           <div className="max-sm:order-2 group col-span-4 lg:col-span-2 row-span-2 rounded-3xl shadow-lg shadow-slate-100 animate-skills p-8 text-slate-700">
