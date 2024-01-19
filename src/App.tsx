@@ -44,7 +44,7 @@ function App() {
               title="Cameron Clark"
               className="md:hidden rounded-full h-[9rem] lg:h-[11rem] w-[9rem] lg:w-[11rem] mx-auto mb-8"
             />
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-transparent bg-clip-text animate-my-name w-fit mx-auto md:mx-0">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-semibold text-transparent bg-clip-text animate-my-name w-fit mx-auto md:mx-0">
               Cameron Clark
             </h1>
             <p className="font-light text-lg md:text-xl text-slate-600 my-3">
