@@ -37,16 +37,20 @@ function App() {
         <Nav></Nav>
         <section className="grid grid-cols-4 grid-rows-1 px-8 md:px-28 py-10 gap-8">
           {/* Hero */}
-          <div className="col-span-2 mb-24 space-y-3">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-transparent bg-clip-text animate-my-name w-fit">
-              Cameron
-              <br />
-              Clark
+          <div className="col-span-4 md:col-span-2 mb-24 text-center md:text-left">
+            <img
+              src="images/cameron-clark.jpg"
+              alt="Cameron Clark"
+              title="Cameron Clark"
+              className="md:hidden rounded-full h-[9rem] lg:h-[11rem] w-[9rem] lg:w-[11rem] mx-auto mb-8"
+            />
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-transparent bg-clip-text animate-my-name w-fit mx-auto md:mx-0">
+              Cameron Clark
             </h1>
-            <p className="font-mon font-light text-lg md:text-xl text-slate-600">
+            <p className="font-light text-lg md:text-xl text-slate-600 my-3">
               Founder and full stack software engineer based in Miami
             </p>
-            <div className="gap-3 flex">
+            <div className="gap-3 flex justify-center md:justify-start">
               <a
                 href="https://github.com/camc8"
                 title="My Github"
@@ -63,7 +67,7 @@ function App() {
               </a>
             </div>
           </div>
-          <div className="col-span-2 flex">
+          <div className="hidden md:flex md:col-span-2">
             <img
               src="images/cameron-clark.jpg"
               alt="Cameron Clark"
