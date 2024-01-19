@@ -23,7 +23,7 @@ export default function Nav() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed top-0 right-0 h-screen w-screen grid place-content-center gap-20 px-8 md:px-28 bg-white font-thin text-center text-4xl">
+              className="fixed top-0 right-0 h-screen w-screen grid place-content-center gap-20 px-8 md:px-28 bg-white font-light text-center text-4xl">
               <a
                 href="/"
                 className="text-slate-800 active:text-slate-700"
