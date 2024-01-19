@@ -44,7 +44,7 @@ function App() {
               Clark
             </h1>
             <p className="font-mon font-light text-lg md:text-xl text-slate-600">
-              Full stack software engineer & web developer based in Miami
+              Founder and full stack software engineer based in Miami
             </p>
             <div className="gap-3 flex">
               <a
@@ -66,6 +66,7 @@ function App() {
           {/* Skills */}
           <div className="max-sm:order-2 group col-span-4 lg:col-span-2 row-span-2 rounded-3xl shadow-lg shadow-slate-100 animate-skills p-8 text-slate-700">
             <div className="group-hover:scale-[1.02] duration-200 ease-linear">
+              <h2 className="text-slate-800 text-xl mb-2">Techincal Skills</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div>
                   <h2 className="text-slate-800 text-lg mb-2">Front end</h2>
@@ -191,9 +192,9 @@ function App() {
               <p className="text-slate-700">
                 I grew up with an interest in engineering and software and it
                 continues to be a passion of mine to this day. With over 8 years
-                of experience with web design, full stack development, and
-                backend/database technology, I can turn pretty much any idea
-                into a reality.
+                of experience with full stack development, web design, backend,
+                and database technology, I can turn pretty much any idea into a
+                reality.
               </p>
               {/* <span className="flex items-center gap-1 text-slate-700">
                   Read more <FiArrowRight className="mt-[1px]" />
@@ -306,14 +307,14 @@ function App() {
           <div
             id="contact"
             className="max-sm:order-8 col-span-4 row-span-1 rounded-3xl shadow-lg shadow-slate-100 bg-slate-100 p-8">
-            <h2 className="text-slate-700 text-xl">
+            <h2 className="text-slate-800 text-xl">
               Let's make something great!
             </h2>
-            <div className="text-slate-800 space-y-3 font-light">
+            <div className="text-slate-700 space-y-3 font-light">
               Send me an email at
               <a
                 title="Send me an email"
-                className="mx-1"
+                className="mx-1 text-slate-800"
                 href="mailto:cameron@xcorpllc.com">
                 cameron@xcorpllc.com
               </a>
