@@ -6,7 +6,6 @@ import {
   FaNodeJs,
   FaGithub,
   FaFigma,
-  FaNpm,
   FaJava,
   FaDocker,
   FaAws,
@@ -19,14 +18,15 @@ import {
   BiLogoPython,
   BiLogoGit,
   BiLogoLinkedinSquare,
+  BiLogoTypescript,
 } from "react-icons/bi";
 import {
-  SiVite,
   SiAdobephotoshop,
   SiRedis,
   SiRemix,
   SiMongodb,
   SiJest,
+  SiCypress,
 } from "react-icons/si";
 import { TbBrandMysql } from "react-icons/tb";
 
@@ -81,7 +81,7 @@ function App() {
               <h2 className="text-slate-800 text-xl mb-2">Techincal Skills</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div>
-                  <h2 className="text-slate-800 text-lg mb-2">Front end</h2>
+                  <h2 className="text-slate-800 text-lg mb-2">Primary</h2>
 
                   <ul className="mt-2 grid gap-4 [&>li]:inline-flex [&>li]:items-center">
                     <li>
@@ -94,7 +94,11 @@ function App() {
                     </li>
                     <li>
                       <BiLogoJavascript className="text-yellow-500 text-2xl" />
-                      &nbsp;JS / ES6 / TS
+                      &nbsp;JS / ES6
+                    </li>
+                    <li>
+                      <BiLogoTypescript className="text-blue-500 text-2xl" />
+                      &nbsp;Typescript
                     </li>
                     <li>
                       <FaReact className="text-sky-500 text-2xl" />
@@ -116,7 +120,7 @@ function App() {
                   <ul className="mt-2 grid gap-4 [&>li]:inline-flex [&>li]:items-center">
                     <li>
                       <BiLogoPhp className="text-cyan-700 text-2xl" />
-                      &nbsp;PHP / Laravel
+                      &nbsp;PHP & Laravel
                     </li>
                     <li>
                       <FaNodeJs className="text-lime-500 text-2xl" />
@@ -136,7 +140,7 @@ function App() {
                     </li>
                     <li>
                       <TbBrandMysql className="text-sky-800 text-2xl" />
-                      &nbsp;MySQL / SQLite
+                      &nbsp;MySQL & SQLite
                     </li>
                     <li>
                       <SiRedis className="text-red-600 text-2xl" />
@@ -160,16 +164,12 @@ function App() {
                       &nbsp;Github
                     </li>
                     <li>
-                      <SiVite className="text-green-500 text-2xl" />
-                      &nbsp;Vite
-                    </li>
-                    <li>
                       <SiJest className="text-red-800 text-2xl" />
-                      &nbsp;Jest/Vitest
+                      &nbsp;Jest & Vitest
                     </li>
                     <li>
-                      <FaNpm className="text-red-500 text-2xl" />
-                      &nbsp;NPM
+                      <SiCypress className="text-red-800 text-2xl" />
+                      &nbsp;Cypress & Playwright
                     </li>
                     <li>
                       <FaDocker className="text-blue-700 text-2xl" />
