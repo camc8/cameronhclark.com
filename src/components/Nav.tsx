@@ -28,7 +28,7 @@ export default function Nav() {
                 href="/"
                 className="text-slate-800 active:text-slate-700"
                 title="Home">
-                ./
+                /
               </a>
               <a
                 onClick={() => setNavOpen(false)}
