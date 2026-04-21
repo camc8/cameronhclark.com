@@ -24,7 +24,7 @@ export default function AppleIcon() {
             fontWeight: 700,
             fontFamily: 'sans-serif',
             lineHeight: 1,
-            marginTop: '6px',
+            paddingBottom: '10px',
           }}
         >
           C

@@ -24,7 +24,7 @@ export default function Icon() {
             fontWeight: 700,
             fontFamily: 'sans-serif',
             lineHeight: 1,
-            marginTop: '1px',
+            paddingBottom: '2px',
           }}
         >
           C
