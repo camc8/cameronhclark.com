@@ -71,24 +71,24 @@ export default function DosCard() {
             </div>
 
             {/* Name */}
-            <h1 className="font-serif text-3xl font-extrabold text-stone-900 tracking-wide leading-[1.1] mb-1">
+            <h1 className="font-serif text-3xl font-bold text-stone-900 tracking-wide leading-[1.1] mb-1">
               {NAME_LINE1}
               <br />
               {NAME_LINE2}
             </h1>
 
             {/* Title */}
-            <p className="font-serif text-sm text-stone-500 mb-1 tracking-wide">
+            <p className="font-serif text-sm text-stone-500 mb-1">
               {TITLE}
             </p>
 
             {/* Specialty */}
-            <p className="font-serif text-xs text-stone-400 italic mb-3 leading-snug">
-              &ldquo;{SPECIALTY}&rdquo;
+            <p className="font-serif text-sm text-stone-400 italic mb-1">
+              {SPECIALTY}
             </p>
 
             {/* Company */}
-            <p className="font-serif text-[11px] text-stone-400 tracking-widest uppercase mb-4">
+            <p className="font-serif text-sm text-stone-400 tracking-widest uppercase mb-5">
               {COMPANY}
             </p>
 
