@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import DosCard from './dos-card'
 
 export const metadata: Metadata = {
@@ -6,11 +6,12 @@ export const metadata: Metadata = {
   robots: {
     index: false,
     follow: false,
-    googleBot: {
-      index: false,
-      follow: false,
-    },
+    googleBot: { index: false, follow: false },
   },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#f5f5f4',
 }
 
 export default function DosPage() {
