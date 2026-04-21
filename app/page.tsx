@@ -143,7 +143,7 @@ export default function Home() {
         {/* Hero */}
         <section className="mb-20">
           <h1 className="font-serif text-4xl font-bold tracking-tight text-neutral-900 mb-4">
-            Cameron Hernando Clark
+            Cameron<br className="sm:hidden" /> Hernando Clark
           </h1>
           <p className="text-lg text-neutral-500 leading-relaxed max-w-xl">
             Miami, FL — software engineer,{' '}
