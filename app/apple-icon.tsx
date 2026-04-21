@@ -7,7 +7,7 @@ export const contentType = 'image/png'
 
 export default async function AppleIcon() {
   const fontData = await readFile(
-    path.join(process.cwd(), 'app/fonts/playfair-display-900.ttf'),
+    path.join(process.cwd(), 'app/fonts/cormorant-garamond-700.ttf'),
   )
 
   return new ImageResponse(
@@ -28,7 +28,7 @@ export default async function AppleIcon() {
             color: '#fff',
             fontSize: '128px',
             fontWeight: 700,
-            fontFamily: 'Playfair',
+            fontFamily: 'Garamond',
             lineHeight: 1,
             paddingBottom: '10px',
           }}
@@ -39,7 +39,7 @@ export default async function AppleIcon() {
     ),
     {
       ...size,
-      fonts: [{ name: 'Playfair', data: fontData, style: 'normal', weight: 900 }],
+      fonts: [{ name: 'Garamond', data: fontData, style: 'normal', weight: 700 }],
     },
   )
 }
