@@ -186,7 +186,10 @@ export default function DosCard() {
           <div className="flex-1 sm:max-h-8" />
 
           {/* Contact list */}
-          <div style={{ padding: '0 32px 24px', display: 'flex', flexDirection: 'column' }}>
+          <div
+            className="sm:pt-5"
+            style={{ paddingLeft: 32, paddingRight: 32, paddingBottom: 24, display: 'flex', flexDirection: 'column' }}
+          >
             <a
               href={`mailto:${EMAIL}`}
               style={{
