@@ -66,7 +66,7 @@ export default function DosCard() {
             </div>
 
             {/* Name — two lines */}
-            <h1 className="font-serif text-3xl font-bold text-stone-900 tracking-wide leading-snug mb-1.5">
+            <h1 className="font-serif text-3xl font-black text-stone-900 tracking-wide leading-[1.1] mb-1.5">
               {NAME_LINE1}
               <br />
               {NAME_LINE2}
