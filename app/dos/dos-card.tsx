@@ -85,16 +85,13 @@ export default function DosCard() {
               {TITLE}
             </p>
 
-            {/* Specialty */}
-            <p className="font-serif text-sm text-stone-400 italic mb-2">
+            {/* Specialty + Company */}
+            <p className="font-serif text-xs text-stone-400 leading-relaxed">
               {SPECIALTY}
-            </p>
-
-            {/* Company */}
-            <p className="font-serif text-sm text-stone-400 tracking-widest uppercase">
-              <a href={COMPANY_1_URL} target="_blank" rel="noopener noreferrer" className="hover:text-stone-600 transition-colors">{COMPANY_1}</a>
+              {' · '}
+              <a href={COMPANY_1_URL} target="_blank" rel="noopener noreferrer" className="text-stone-600 hover:text-stone-800 transition-colors">{COMPANY_1}</a>
               {' & '}
-              <a href={COMPANY_2_URL} target="_blank" rel="noopener noreferrer" className="hover:text-stone-600 transition-colors">{COMPANY_2}</a>
+              <a href={COMPANY_2_URL} target="_blank" rel="noopener noreferrer" className="text-stone-600 hover:text-stone-800 transition-colors">{COMPANY_2}</a>
             </p>
 
             {/* Spacer */}
