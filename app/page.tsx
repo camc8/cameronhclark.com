@@ -92,21 +92,21 @@ const roles = [
     description:
       'Full-stack web development — React, TypeScript, Node.js, and cloud infrastructure. Building products used by real people.',
   },
-  {
-    title: 'Community Relations Director',
-    description:
-      'Senior care placement specialist at DOS Healthcare in Miami, FL — helping South Florida families find assisted living and memory care.',
-  },
+  // {
+  //   title: 'Community Relations Director',
+  //   description:
+  //     'Senior care placement specialist at DOS Healthcare in Miami, FL — helping South Florida families find assisted living and memory care.',
+  // },
   {
     title: 'Property Management',
     description:
       'Owner-operator focused on residential and commercial property management in the Miami area.',
   },
-  {
-    title: 'AI Entrepreneur',
-    description:
-      'Founder of an AI company building tools that automate workflows and create new leverage for businesses.',
-  },
+  // {
+  //   title: 'AI Entrepreneur',
+  //   description:
+  //     'Founder of an AI company building tools that automate workflows and create new leverage for businesses.',
+  // },
 ]
 
 export default function Home() {
