@@ -6,34 +6,42 @@ import { useEffect } from 'react'
 const PHONE = '3058020002'
 const PHONE_DISPLAY = '(305) 802-0002'
 const EMAIL = 'cameron@doshealthcare.com'
-const NAME_LINE1 = 'Cameron'
-const NAME_LINE2 = 'Hernando Clark'
-const TITLE = 'Community Relations Director'
-const SPECIALTY = 'Assisted Living & Memory Care Placement'
 const COMPANY_1 = 'Sugarmill'
 const COMPANY_1_URL = 'https://themanorsofcitrus.com/locations/sugarmill-manor-assisted-living/'
 const COMPANY_2 = 'The Gardens'
 const COMPANY_2_URL = 'https://themanorsofcitrus.com/locations/crystal-gem-manor-assisted-living/'
-const BG = '#f5f5f4' // stone-100
+
+const C = {
+  bg:            'oklch(97% 0.012 75)',
+  card:          'oklch(99% 0.008 70)',
+  textPrimary:   'oklch(18% 0.01 60)',
+  textSecondary: 'oklch(50% 0.01 60)',
+  textMuted:     'oklch(68% 0.01 60)',
+  accent:        'oklch(62% 0.09 70)',
+  rule:          'oklch(88% 0.012 70)',
+  btnBg:         'oklch(22% 0.01 60)',
+} as const
+
+const dm: React.CSSProperties = { fontFamily: "var(--font-dm-sans, 'DM Sans'), sans-serif" }
+const cg: React.CSSProperties = { fontFamily: "'Cormorant Garamond', 'var(--font-cormorant)', serif" }
 
 function saveContact() {
   const vcard = [
     'BEGIN:VCARD',
     'VERSION:3.0',
     'FN:Cameron Hernando Clark',
-    'N:Clark;Cameron;Hernando;;',
+    'N:Clark;Cameron Hernando;;;',
+    'TITLE:Community Relations Director',
     `ORG:${COMPANY_1} & ${COMPANY_2}`,
-    `TITLE:${TITLE}`,
     `TEL;TYPE=CELL:+1${PHONE}`,
     `EMAIL:${EMAIL}`,
     'END:VCARD',
   ].join('\r\n')
-
   const blob = new Blob([vcard], { type: 'text/vcard' })
   const url = URL.createObjectURL(blob)
   const a = document.createElement('a')
   a.href = url
-  a.download = 'cameron-clark-dos.vcf'
+  a.download = 'Cameron_Hernando_Clark.vcf'
   a.click()
   URL.revokeObjectURL(url)
 }
@@ -42,8 +50,8 @@ export default function DosCard() {
   useEffect(() => {
     const html = document.documentElement
     const body = document.body
-    html.style.backgroundColor = BG
-    body.style.backgroundColor = BG
+    html.style.backgroundColor = C.bg
+    body.style.backgroundColor = C.bg
     html.style.overflow = 'hidden'
     body.style.overflow = 'hidden'
     return () => {
@@ -55,99 +63,159 @@ export default function DosCard() {
   }, [])
 
   return (
-    <div className="h-dvh overflow-hidden bg-stone-100 flex items-stretch justify-center px-4 py-6">
-      <div className="w-full max-w-xs flex flex-col">
-        <div className="bg-white rounded-2xl border border-stone-200 overflow-hidden flex-1 flex flex-col">
+    <div
+      className="h-dvh overflow-hidden flex items-stretch justify-center px-4 py-6"
+      style={{ background: C.bg, ...dm }}
+    >
+      <div className="w-full max-w-[340px] flex flex-col">
+        <div
+          className="flex-1 flex flex-col rounded-3xl overflow-hidden"
+          style={{ background: C.card, border: `1px solid ${C.rule}` }}
+        >
 
-          <div className="px-7 pt-8 pb-7 flex flex-col items-center text-center flex-1">
-
+          {/* Header */}
+          <div
+            className="flex flex-col items-center text-center"
+            style={{ padding: '44px 32px 36px' }}
+          >
             {/* Photo */}
-            <div className="mb-5 w-20 h-20 rounded-full overflow-hidden ring-1 ring-stone-200 shrink-0">
+            <div
+              className="rounded-full overflow-hidden shrink-0 mb-6"
+              style={{ width: 88, height: 88, border: `1px solid ${C.rule}` }}
+            >
               <Image
                 src="/images/cameron-clark.jpg"
                 alt="Cameron Hernando Clark"
-                width={80}
-                height={80}
-                className="w-full h-full object-cover object-top"
+                width={88}
+                height={88}
+                className="w-full h-full object-cover"
+                style={{ objectPosition: 'center top', transform: 'scale(1.8) translateY(8%) translateX(-2%)' }}
                 priority
               />
             </div>
 
             {/* Name */}
-            <h1 className="font-serif text-3xl font-bold text-stone-900 tracking-wide leading-[1.1] mb-5">
-              {NAME_LINE1}
-              <br />
-              {NAME_LINE2}
+            <h1
+              style={{
+                ...cg,
+                fontWeight: 400,
+                fontSize: 34,
+                lineHeight: 1.1,
+                letterSpacing: '-0.02em',
+                color: C.textPrimary,
+                marginBottom: 18,
+              }}
+            >
+              Cameron<br />Hernando Clark
             </h1>
 
-            {/* Title */}
-            <p className="font-serif text-sm text-stone-500 mb-2">
-              {TITLE}
-            </p>
+            {/* Gold rule */}
+            <div style={{ width: 32, height: 1, background: C.accent, margin: '0 auto 18px' }} />
 
-            {/* Specialty + Company */}
-            <p className="font-serif text-xs text-stone-400 leading-relaxed">
-              {SPECIALTY}
-              {' · '}
-              <a href={COMPANY_1_URL} target="_blank" rel="noopener noreferrer" className="text-stone-600 hover:text-stone-800 transition-colors">{COMPANY_1}</a>
-              {' & '}
-              <a href={COMPANY_2_URL} target="_blank" rel="noopener noreferrer" className="text-stone-600 hover:text-stone-800 transition-colors">{COMPANY_2}</a>
-            </p>
+            {/* Title block */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
+              <span style={{ ...dm, fontSize: 12, fontWeight: 500, letterSpacing: '0.12em', textTransform: 'uppercase', color: C.textSecondary }}>
+                Community Relations Director
+              </span>
+              <span style={{ ...cg, fontStyle: 'italic', fontSize: 15, color: C.textMuted, letterSpacing: '0.01em' }}>
+                Assisted Living &amp; Memory Care Placement
+              </span>
+              <span style={{ ...dm, fontSize: 10.5, fontWeight: 500, letterSpacing: '0.18em', textTransform: 'uppercase', color: C.accent, marginTop: 2 }}>
+                <a href={COMPANY_1_URL} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>{COMPANY_1}</a>
+                {' & '}
+                <a href={COMPANY_2_URL} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>{COMPANY_2}</a>
+              </span>
+            </div>
+          </div>
 
-            {/* Spacer */}
-            <div className="flex-1" />
+          {/* Push actions to bottom */}
+          <div className="flex-1" />
 
-            {/* Primary actions */}
-            <div className="flex justify-center gap-8 mb-3 w-full">
-              <a href={`sms:+1${PHONE}`} className="flex flex-col items-center gap-1.5 active:scale-95 transition-transform">
-                <div className="w-14 h-14 rounded-full bg-stone-900 hover:bg-stone-700 transition-colors flex items-center justify-center text-white">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                  </svg>
-                </div>
-                <span className="text-xs text-stone-500 font-medium">Text</span>
+          {/* Actions */}
+          <div style={{ padding: '28px 32px', display: 'flex', flexDirection: 'column', gap: 10 }}>
+            <div style={{ display: 'flex', gap: 10 }}>
+              <a
+                href={`sms:+1${PHONE}`}
+                style={{
+                  ...dm, flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  gap: 8, height: 46, borderRadius: 12, background: C.btnBg, color: '#fff',
+                  textDecoration: 'none', fontSize: 13, fontWeight: 500, letterSpacing: '0.02em',
+                  WebkitTapHighlightColor: 'transparent',
+                }}
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg>
+                Text
               </a>
-
-              <a href={`tel:+1${PHONE}`} className="flex flex-col items-center gap-1.5 active:scale-95 transition-transform">
-                <div className="w-14 h-14 rounded-full bg-stone-900 hover:bg-stone-700 transition-colors flex items-center justify-center text-white">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l.95-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
-                  </svg>
-                </div>
-                <span className="text-xs text-stone-500 font-medium">Call</span>
+              <a
+                href={`tel:+1${PHONE}`}
+                style={{
+                  ...dm, flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  gap: 8, height: 46, borderRadius: 12, background: C.btnBg, color: '#fff',
+                  textDecoration: 'none', fontSize: 13, fontWeight: 500, letterSpacing: '0.02em',
+                  WebkitTapHighlightColor: 'transparent',
+                }}
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                Call
               </a>
             </div>
-
-            {/* Save Contact */}
             <button
               onClick={saveContact}
-              className="w-full flex items-center justify-center gap-2 py-2.5 mb-4 rounded-xl border border-stone-200 bg-stone-50 text-stone-700 hover:bg-stone-100 hover:border-stone-300 active:scale-[0.98] transition-all cursor-pointer"
+              style={{
+                ...dm, width: '100%', height: 40, borderRadius: 12, background: 'transparent',
+                border: `1px solid ${C.rule}`, color: C.textSecondary, fontSize: 12,
+                fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', cursor: 'pointer',
+                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 7,
+                WebkitTapHighlightColor: 'transparent',
+              }}
             >
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
                 <circle cx="12" cy="7" r="4" />
               </svg>
-              <span className="text-sm font-medium">Save Contact</span>
+              Save Contact
             </button>
+          </div>
 
-            {/* Contact info */}
-            <div className="w-full space-y-2 border-t border-stone-100 pt-4">
-              <a href={`mailto:${EMAIL}`} className="flex items-center gap-2.5 justify-center text-stone-400 hover:text-stone-800 transition-colors">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
-                  <rect width="20" height="16" x="2" y="4" rx="2" />
+          {/* Contact list */}
+          <div style={{ padding: '28px 32px', display: 'flex', flexDirection: 'column' }}>
+            <a
+              href={`mailto:${EMAIL}`}
+              style={{
+                ...dm, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                gap: 12, padding: '13px 0', textDecoration: 'none', color: C.textSecondary,
+                fontSize: 13.5, fontWeight: 400,
+              }}
+            >
+              <span style={{ width: 16, flexShrink: 0, color: C.textMuted, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                 </svg>
-                <span className="text-sm">{EMAIL}</span>
-              </a>
-              <a href={`tel:+1${PHONE}`} className="flex items-center gap-2.5 justify-center text-stone-400 hover:text-stone-800 transition-colors">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l.95-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+              </span>
+              {EMAIL}
+            </a>
+            <a
+              href={`tel:+1${PHONE}`}
+              style={{
+                ...dm, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                gap: 12, padding: '13px 0', textDecoration: 'none', color: C.textSecondary,
+                fontSize: 13.5, fontWeight: 400,
+              }}
+            >
+              <span style={{ width: 16, flexShrink: 0, color: C.textMuted, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                 </svg>
-                <span className="text-sm">{PHONE_DISPLAY}</span>
-              </a>
-            </div>
-
+              </span>
+              {PHONE_DISPLAY}
+            </a>
           </div>
+
         </div>
       </div>
     </div>

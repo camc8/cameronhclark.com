@@ -1,13 +1,20 @@
 import type { Metadata } from 'next'
 import { GeistMono } from 'geist/font/mono'
-import { Playfair_Display, Inter } from 'next/font/google'
+import { Cormorant_Garamond, Inter, DM_Sans } from 'next/font/google'
 import './globals.css'
 
-const playfair = Playfair_Display({
+const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
-  variable: '--font-playfair',
-  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-cormorant',
+  weight: ['300', '400', '500', '600'],
   style: ['normal', 'italic'],
+  display: 'swap',
+})
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  variable: '--font-dm-sans',
+  weight: ['300', '400', '500'],
   display: 'swap',
 })
 
@@ -34,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable} ${GeistMono.variable}`}>
+    <html lang="en" className={`${cormorant.variable} ${inter.variable} ${dmSans.variable} ${GeistMono.variable}`}>
       <body className="bg-white text-neutral-900 antialiased font-sans">
         {children}
       </body>

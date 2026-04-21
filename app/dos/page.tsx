@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#f5f5f4',
+  themeColor: '#f7f4ed',
 }
 
 export default function DosPage() {
