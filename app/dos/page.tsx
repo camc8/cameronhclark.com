@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import DosCard from './dos-card'
 
 export const metadata: Metadata = {
-  title: 'Cameron Clark — DOS Healthcare',
+  title: { absolute: 'Cameron Hernando Clark — DOS Healthcare' },
   robots: {
     index: false,
     follow: false,
