@@ -7,7 +7,7 @@ export const contentType = 'image/png'
 
 export default async function AppleIcon() {
   const fontData = await readFile(
-    path.join(process.cwd(), 'app/fonts/eb-garamond-700.ttf'),
+    path.join(process.cwd(), 'app/fonts/cormorant-garamond-700.ttf'),
   )
 
   return new ImageResponse(

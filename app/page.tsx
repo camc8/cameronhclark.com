@@ -142,7 +142,7 @@ export default function Home() {
 
         {/* Hero */}
         <section className="mb-20">
-          <h1 className="text-3xl font-semibold tracking-tight text-neutral-900 mb-4">
+          <h1 className="font-serif text-4xl font-bold tracking-tight text-neutral-900 mb-4">
             Cameron Hernando Clark
           </h1>
           <p className="text-lg text-neutral-500 leading-relaxed max-w-xl">
@@ -161,7 +161,7 @@ export default function Home() {
           <div className="space-y-8">
             {roles.map((role) => (
               <div key={role.title} className="group">
-                <h3 className="font-medium text-neutral-900 mb-1">
+                <h3 className="font-serif text-lg font-semibold text-neutral-900 mb-1">
                   {role.title}
                 </h3>
                 <p className="text-sm text-neutral-500 leading-relaxed">

@@ -1,13 +1,19 @@
 import type { Metadata } from 'next'
 import { GeistMono } from 'geist/font/mono'
-import { EB_Garamond } from 'next/font/google'
+import { Cormorant_Garamond, Inter } from 'next/font/google'
 import './globals.css'
 
-const garamond = EB_Garamond({
+const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
-  variable: '--font-garamond',
+  variable: '--font-cormorant',
   weight: ['400', '500', '600', '700'],
   style: ['normal', 'italic'],
+  display: 'swap',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
   display: 'swap',
 })
 
@@ -28,8 +34,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${garamond.variable} ${GeistMono.variable}`}>
-      <body className="bg-white text-neutral-900 antialiased font-serif">
+    <html lang="en" className={`${cormorant.variable} ${inter.variable} ${GeistMono.variable}`}>
+      <body className="bg-white text-neutral-900 antialiased font-sans">
         {children}
       </body>
     </html>
