@@ -63,32 +63,34 @@ export default function DosCard() {
   }, [])
 
   return (
+    // Mobile: h-dvh stretch fills viewport. Desktop: auto-height centered.
     <div
-      className="h-dvh overflow-hidden flex items-stretch justify-center px-4 py-6"
+      className="h-dvh sm:h-auto sm:min-h-screen overflow-hidden flex items-stretch sm:items-center justify-center px-4 py-4 sm:py-16"
       style={{ background: C.bg, ...dm }}
     >
       <div className="w-full max-w-[340px] flex flex-col">
+        {/* Mobile: flex-1 stretches card to fill. Desktop: flex-none = natural height. */}
         <div
-          className="flex-1 flex flex-col rounded-3xl overflow-hidden"
+          className="flex-1 sm:flex-none flex flex-col rounded-3xl overflow-hidden"
           style={{ background: C.card, border: `1px solid ${C.rule}` }}
         >
 
-          {/* Header */}
+          {/* Header — tighter padding fits iPhone SE */}
           <div
             className="flex flex-col items-center text-center"
-            style={{ padding: '44px 32px 36px' }}
+            style={{ padding: '28px 32px 24px' }}
           >
-            {/* Photo */}
+            {/* Photo — object-contain shows full image, bg fills letterbox area */}
             <div
               className="rounded-full overflow-hidden shrink-0 mb-6"
-              style={{ width: 88, height: 88, border: `1px solid ${C.rule}` }}
+              style={{ width: 88, height: 88, border: `1px solid ${C.rule}`, background: C.card }}
             >
               <Image
                 src="/images/cameron-clark.jpg"
                 alt="Cameron Hernando Clark"
                 width={88}
                 height={88}
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-contain"
                 priority
               />
             </div>
@@ -127,11 +129,11 @@ export default function DosCard() {
             </div>
           </div>
 
-          {/* Equal spacer above actions */}
-          <div className="flex-1" />
+          {/* Spacer above actions — grows on mobile, capped on desktop */}
+          <div className="flex-1 sm:max-h-8" />
 
           {/* Actions */}
-          <div style={{ padding: '28px 32px', display: 'flex', flexDirection: 'column', gap: 10 }}>
+          <div style={{ padding: '0 32px', display: 'flex', flexDirection: 'column', gap: 10 }}>
             <div style={{ display: 'flex', gap: 10 }}>
               <a
                 href={`sms:+1${PHONE}`}
@@ -180,16 +182,16 @@ export default function DosCard() {
             </button>
           </div>
 
-          {/* Equal spacer below actions */}
-          <div className="flex-1" />
+          {/* Spacer below actions — mirrors spacer above */}
+          <div className="flex-1 sm:max-h-8" />
 
           {/* Contact list */}
-          <div style={{ padding: '28px 32px', display: 'flex', flexDirection: 'column' }}>
+          <div style={{ padding: '0 32px 24px', display: 'flex', flexDirection: 'column' }}>
             <a
               href={`mailto:${EMAIL}`}
               style={{
                 ...dm, display: 'flex', alignItems: 'center', justifyContent: 'center',
-                gap: 12, padding: '13px 0', textDecoration: 'none', color: C.textSecondary,
+                gap: 12, padding: '12px 0', textDecoration: 'none', color: C.textSecondary,
                 fontSize: 13.5, fontWeight: 400,
               }}
             >
@@ -205,7 +207,7 @@ export default function DosCard() {
               href={`tel:+1${PHONE}`}
               style={{
                 ...dm, display: 'flex', alignItems: 'center', justifyContent: 'center',
-                gap: 12, padding: '13px 0', textDecoration: 'none', color: C.textSecondary,
+                gap: 12, padding: '12px 0', textDecoration: 'none', color: C.textSecondary,
                 fontSize: 13.5, fontWeight: 400,
               }}
             >
