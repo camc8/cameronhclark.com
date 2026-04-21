@@ -1,7 +1,15 @@
 import type { Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
+import { EB_Garamond } from 'next/font/google'
 import './globals.css'
+
+const garamond = EB_Garamond({
+  subsets: ['latin'],
+  variable: '--font-garamond',
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://camc8.com'),
@@ -20,11 +28,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html
-      lang="en"
-      className={`${GeistSans.variable} ${GeistMono.variable}`}
-    >
-      <body className="bg-white text-neutral-900 antialiased font-sans">
+    <html lang="en" className={`${garamond.variable} ${GeistMono.variable}`}>
+      <body className="bg-white text-neutral-900 antialiased font-serif">
         {children}
       </body>
     </html>

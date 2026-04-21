@@ -146,9 +146,10 @@ export default function Home() {
             Cameron Hernando Clark
           </h1>
           <p className="text-lg text-neutral-500 leading-relaxed max-w-xl">
-            Miami, FL — software engineer, senior care placement director,
-            property manager, and AI company founder. I work across industries
-            because interesting problems don&apos;t stay in one lane.
+            Miami, FL — software engineer,{' '}
+            {/* senior care placement director, */}
+            property manager{/* , and AI company founder */}.{' '}
+            I work across industries because interesting problems don&apos;t stay in one lane.
           </p>
         </section>
 

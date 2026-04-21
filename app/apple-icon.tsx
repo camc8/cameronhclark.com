@@ -1,9 +1,15 @@
 import { ImageResponse } from 'next/og'
+import { readFile } from 'fs/promises'
+import path from 'path'
 
 export const size = { width: 180, height: 180 }
 export const contentType = 'image/png'
 
-export default function AppleIcon() {
+export default async function AppleIcon() {
+  const fontData = await readFile(
+    path.join(process.cwd(), 'app/fonts/eb-garamond-700.ttf'),
+  )
+
   return new ImageResponse(
     (
       <div
@@ -20,9 +26,9 @@ export default function AppleIcon() {
         <span
           style={{
             color: '#fff',
-            fontSize: '124px',
+            fontSize: '128px',
             fontWeight: 700,
-            fontFamily: 'sans-serif',
+            fontFamily: 'Garamond',
             lineHeight: 1,
             paddingBottom: '10px',
           }}
@@ -31,6 +37,9 @@ export default function AppleIcon() {
         </span>
       </div>
     ),
-    { ...size },
+    {
+      ...size,
+      fonts: [{ name: 'Garamond', data: fontData, style: 'normal', weight: 700 }],
+    },
   )
 }

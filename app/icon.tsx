@@ -1,9 +1,15 @@
 import { ImageResponse } from 'next/og'
+import { readFile } from 'fs/promises'
+import path from 'path'
 
 export const size = { width: 32, height: 32 }
 export const contentType = 'image/png'
 
-export default function Icon() {
+export default async function Icon() {
+  const fontData = await readFile(
+    path.join(process.cwd(), 'app/fonts/eb-garamond-700.ttf'),
+  )
+
   return new ImageResponse(
     (
       <div
@@ -20,9 +26,9 @@ export default function Icon() {
         <span
           style={{
             color: '#fff',
-            fontSize: '22px',
+            fontSize: '23px',
             fontWeight: 700,
-            fontFamily: 'sans-serif',
+            fontFamily: 'Garamond',
             lineHeight: 1,
             paddingBottom: '2px',
           }}
@@ -31,6 +37,9 @@ export default function Icon() {
         </span>
       </div>
     ),
-    { ...size },
+    {
+      ...size,
+      fonts: [{ name: 'Garamond', data: fontData, style: 'normal', weight: 700 }],
+    },
   )
 }
