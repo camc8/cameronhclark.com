@@ -10,7 +10,10 @@ const NAME_LINE1 = 'Cameron'
 const NAME_LINE2 = 'Hernando Clark'
 const TITLE = 'Community Relations Director'
 const SPECIALTY = 'Assisted Living & Memory Care Placement'
-const COMPANY = 'DOS Healthcare'
+const COMPANY_1 = 'Sugarmill'
+const COMPANY_1_URL = 'https://themanorsofcitrus.com/locations/sugarmill-manor-assisted-living/'
+const COMPANY_2 = 'The Gardens'
+const COMPANY_2_URL = 'https://themanorsofcitrus.com/locations/crystal-gem-manor-assisted-living/'
 const BG = '#f5f5f4' // stone-100
 
 function saveContact() {
@@ -19,7 +22,7 @@ function saveContact() {
     'VERSION:3.0',
     'FN:Cameron Hernando Clark',
     'N:Clark;Cameron;Hernando;;',
-    `ORG:${COMPANY}`,
+    `ORG:${COMPANY_1} & ${COMPANY_2}`,
     `TITLE:${TITLE}`,
     `TEL;TYPE=CELL:+1${PHONE}`,
     `EMAIL:${EMAIL}`,
@@ -89,7 +92,9 @@ export default function DosCard() {
 
             {/* Company */}
             <p className="font-serif text-sm text-stone-400 tracking-widest uppercase">
-              {COMPANY}
+              <a href={COMPANY_1_URL} target="_blank" rel="noopener noreferrer" className="hover:text-stone-600 transition-colors">{COMPANY_1}</a>
+              {' & '}
+              <a href={COMPANY_2_URL} target="_blank" rel="noopener noreferrer" className="hover:text-stone-600 transition-colors">{COMPANY_2}</a>
             </p>
 
             {/* Spacer */}
