@@ -52,14 +52,14 @@ export default function DosCard() {
   }, [])
 
   return (
-    <div className="h-dvh overflow-hidden bg-stone-100 flex items-center justify-center px-4">
-      <div className="w-full max-w-xs">
-        <div className="bg-white rounded-2xl border border-stone-200 overflow-hidden">
+    <div className="h-dvh overflow-hidden bg-stone-100 flex items-stretch justify-center px-4 py-6">
+      <div className="w-full max-w-xs flex flex-col">
+        <div className="bg-white rounded-2xl border border-stone-200 overflow-hidden flex-1 flex flex-col">
 
-          <div className="px-7 pt-7 pb-6 flex flex-col items-center text-center">
+          <div className="px-7 pt-8 pb-7 flex flex-col items-center text-center flex-1">
 
             {/* Photo */}
-            <div className="mb-4 w-20 h-20 rounded-full overflow-hidden ring-1 ring-stone-200 shrink-0">
+            <div className="mb-5 w-20 h-20 rounded-full overflow-hidden ring-1 ring-stone-200 shrink-0">
               <Image
                 src="/images/cameron-clark.jpg"
                 alt="Cameron Hernando Clark"
@@ -71,26 +71,29 @@ export default function DosCard() {
             </div>
 
             {/* Name */}
-            <h1 className="font-serif text-3xl font-bold text-stone-900 tracking-wide leading-[1.1] mb-1">
+            <h1 className="font-serif text-3xl font-bold text-stone-900 tracking-wide leading-[1.1] mb-5">
               {NAME_LINE1}
               <br />
               {NAME_LINE2}
             </h1>
 
             {/* Title */}
-            <p className="font-serif text-sm text-stone-500 mb-1">
+            <p className="font-serif text-sm text-stone-500 mb-2">
               {TITLE}
             </p>
 
             {/* Specialty */}
-            <p className="font-serif text-sm text-stone-400 italic mb-1">
+            <p className="font-serif text-sm text-stone-400 italic mb-2">
               {SPECIALTY}
             </p>
 
             {/* Company */}
-            <p className="font-serif text-sm text-stone-400 tracking-widest uppercase mb-5">
+            <p className="font-serif text-sm text-stone-400 tracking-widest uppercase">
               {COMPANY}
             </p>
+
+            {/* Spacer */}
+            <div className="flex-1" />
 
             {/* Primary actions */}
             <div className="flex justify-center gap-8 mb-3 w-full">
