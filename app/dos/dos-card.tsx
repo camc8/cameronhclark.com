@@ -88,8 +88,7 @@ export default function DosCard() {
                 alt="Cameron Hernando Clark"
                 width={88}
                 height={88}
-                className="w-full h-full object-cover"
-                style={{ objectPosition: 'center top', transform: 'scale(1.8) translateY(8%) translateX(-2%)' }}
+                className="w-full h-full object-cover object-top"
                 priority
               />
             </div>
@@ -128,7 +127,7 @@ export default function DosCard() {
             </div>
           </div>
 
-          {/* Push actions to bottom */}
+          {/* Equal spacer above actions */}
           <div className="flex-1" />
 
           {/* Actions */}
@@ -180,6 +179,9 @@ export default function DosCard() {
               Save Contact
             </button>
           </div>
+
+          {/* Equal spacer below actions */}
+          <div className="flex-1" />
 
           {/* Contact list */}
           <div style={{ padding: '28px 32px', display: 'flex', flexDirection: 'column' }}>
