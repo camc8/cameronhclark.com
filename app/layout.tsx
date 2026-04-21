@@ -4,18 +4,14 @@ import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Cameron Hernando Clark',
-  description:
-    'Software engineer, marketing director, property manager, and AI entrepreneur.',
-  openGraph: {
-    title: 'Cameron Hernando Clark',
-    description:
-      'Software engineer, marketing director, property manager, and AI entrepreneur.',
-    url: 'https://camc8.com',
-    siteName: 'Cameron Hernando Clark',
-    locale: 'en_US',
-    type: 'website',
+  metadataBase: new URL('https://camc8.com'),
+  title: {
+    default: 'Cameron Hernando Clark — Miami, FL',
+    template: '%s | Cameron Hernando Clark',
   },
+  description:
+    'Cameron Hernando Clark is a Miami, Florida entrepreneur and technologist.',
+  robots: { index: true, follow: true },
 }
 
 export default function RootLayout({
